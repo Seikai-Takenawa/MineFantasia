@@ -1,0 +1,15 @@
+{
+  "itemGroup.minefantasia": "Example Mod Tab",
+  "block.minefantasia.example_block": "Example Block",
+  "item.minefantasia.example_item": "Example Item",
+
+  "minefantasia.configuration.title": "MineFantasia Configs",
+  "minefantasia.configuration.section.minefantasia.common.toml": "MineFantasia Configs",
+  "minefantasia.configuration.section.minefantasia.common.toml.title": "MineFantasia Configs",
+  "minefantasia.configuration.items": "Item List",
+  "minefantasia.configuration.logDirtBlock": "Log Dirt Block",
+  "minefantasia.configuration.magicNumberIntroduction": "Magic Number Text",
+  "minefantasia.configuration.magicNumber": "Magic Number",
+
+  "screen.minefantasia.harp": ""
+}

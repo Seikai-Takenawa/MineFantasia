@@ -1,0 +1,128 @@
+{
+  "harp/4a": {
+    "sounds": [
+      "minefantasia:harp/4a"
+    ],
+    "subtitle": "key.minefantasia.harp/4a"
+  },
+  "harp/4b": {
+    "sounds": [
+      "minefantasia:harp/4b"
+    ],
+    "subtitle": "key.minefantasia.harp/4b"
+  },
+  "harp/4c": {
+    "sounds": [
+      "minefantasia:harp/4c"
+    ],
+    "subtitle": "key.minefantasia.harp/4c"
+  },
+  "harp/4d": {
+    "sounds": [
+      "minefantasia:harp/4d"
+    ],
+    "subtitle": "key.minefantasia.harp/4d"
+  },
+  "harp/4e": {
+    "sounds": [
+      "minefantasia:harp/4e"
+    ],
+    "subtitle": "key.minefantasia.harp/4e"
+  },
+  "harp/4f": {
+    "sounds": [
+      "minefantasia:harp/4f"
+    ],
+    "subtitle": "key.minefantasia.harp/4f"
+  },
+  "harp/4g": {
+    "sounds": [
+      "minefantasia:harp/4g"
+    ],
+    "subtitle": "key.minefantasia.harp/4g"
+  },
+  "harp/5a": {
+    "sounds": [
+      "minefantasia:harp/5a"
+    ],
+    "subtitle": "key.minefantasia.harp/5a"
+  },
+  "harp/5b": {
+    "sounds": [
+      "minefantasia:harp/5b"
+    ],
+    "subtitle": "key.minefantasia.harp/5b"
+  },
+  "harp/5c": {
+    "sounds": [
+      "minefantasia:harp/5c"
+    ],
+    "subtitle": "key.minefantasia.harp/5c"
+  },
+  "harp/5d": {
+    "sounds": [
+      "minefantasia:harp/5d"
+    ],
+    "subtitle": "key.minefantasia.harp/5d"
+  },
+  "harp/5e": {
+    "sounds": [
+      "minefantasia:harp/5e"
+    ],
+    "subtitle": "key.minefantasia.harp/5e"
+  },
+  "harp/5f": {
+    "sounds": [
+      "minefantasia:harp/5f"
+    ],
+    "subtitle": "key.minefantasia.harp/5f"
+  },
+  "harp/5g": {
+    "sounds": [
+      "minefantasia:harp/5g"
+    ],
+    "subtitle": "key.minefantasia.harp/5g"
+  },
+  "harp/6a": {
+    "sounds": [
+      "minefantasia:harp/6a"
+    ],
+    "subtitle": "key.minefantasia.harp/6a"
+  },
+  "harp/6b": {
+    "sounds": [
+      "minefantasia:harp/6b"
+    ],
+    "subtitle": "key.minefantasia.harp/6b"
+  },
+  "harp/6c": {
+    "sounds": [
+      "minefantasia:harp/6c"
+    ],
+    "subtitle": "key.minefantasia.harp/6c"
+  },
+  "harp/6d": {
+    "sounds": [
+      "minefantasia:harp/6d"
+    ],
+    "subtitle": "key.minefantasia.harp/6d"
+  },
+  "harp/6e": {
+    "sounds": [
+      "minefantasia:harp/6e"
+    ],
+    "subtitle": "key.minefantasia.harp/6e"
+  },
+  "harp/6f": {
+    "sounds": [
+      "minefantasia:harp/6f"
+    ],
+    "subtitle": "key.minefantasia.harp/6f"
+  },
+  "harp/6g": {
+    "sounds": [
+      "minefantasia:harp/6g"
+    ],
+    "subtitle": "key.minefantasia.harp/6g"
+  }
+}
