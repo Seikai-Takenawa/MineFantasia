@@ -7,12 +7,15 @@ import com.takenawa.minefantasia.screen.MFInstrumentScreen;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 
 @EventBusSubscriber(modid = MineFantasia.MODID)
 public class MFInstrumentClientHandler {
@@ -21,7 +24,7 @@ public class MFInstrumentClientHandler {
     private static CameraType previousCameraType = null;
 
     public static boolean isPlayingInstrument() {
-        return !isPlaying;
+        return isPlaying;
     }
 
     public static String getCurrentInstrumentId() {
@@ -43,7 +46,7 @@ public class MFInstrumentClientHandler {
         previousCameraType = mc.options.getCameraType();
 
         mc.options.setCameraType(CameraType.THIRD_PERSON_BACK);
-        pauseBackgroundMusic();
+        clearAllSounds();
 
         mc.options.hideGui = true;
 
@@ -111,13 +114,28 @@ public class MFInstrumentClientHandler {
         }
     }
 
-    private static void pauseBackgroundMusic() {
+    @SubscribeEvent
+    public static void onPlaySound(PlaySoundEvent event) {
+        SoundInstance sound = event.getSound();
+        if (isPlaying) {
+            if (sound != null && sound.getSource() == SoundSource.MUSIC) {
+                pauseBackgroundMusic(sound);
+            }
+        }
+    }
+
+    private static void pauseBackgroundMusic(SoundInstance sound) {
         Minecraft mc = Minecraft.getInstance();
-        mc.getSoundManager().stop();
+        mc.getSoundManager().stop(sound);
     }
 
     private static void resumeBackgroundMusic() {
         Minecraft mc = Minecraft.getInstance();
         mc.getSoundManager().resume();
+    }
+
+    private static void clearAllSounds() {
+        Minecraft mc = Minecraft.getInstance();
+        mc.getSoundManager().stop();
     }
 }
