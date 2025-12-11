@@ -34,9 +34,5 @@ public class MineFantasia {
         SOUNDS.register(modEventBus);
         MFCreativeModTab.registerModCreativeModeTabs();
         CREATIVE_MODE_TABS.register(modEventBus);
-
-        MFCreativeModTab tabRegister = new MFCreativeModTab();
-        modEventBus.addListener(tabRegister::addCreative);
-
     }
 }

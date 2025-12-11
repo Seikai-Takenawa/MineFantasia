@@ -11,6 +11,9 @@ public class MFItemsRegistry {
     public static final DeferredItem<Item> HARP = ITEM.register("harp",
             MFHarpItem::new);
 
+    public static final DeferredItem<Item> KALIMBA = ITEM.register("kalimba",
+            MFKalimbaItem::new);
+
     public static void registerModItems() {
         MineFantasia.LOGGER.info("Registering Items for MineFantasia...");
     }

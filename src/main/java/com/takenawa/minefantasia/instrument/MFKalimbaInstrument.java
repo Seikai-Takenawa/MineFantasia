@@ -1,10 +1,12 @@
-package com.takenawa.minefantasia.sound;
+package com.takenawa.minefantasia.instrument;
+
+import com.takenawa.minefantasia.sound.MFSoundsRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MFHarpInstrument implements MFInstruments {
-    private static final String INSTRUMENT_ID = "harp";
+public class MFKalimbaInstrument implements MFInstruments {
+    private static final String INSTRUMENT_ID = "kalimba";
     private static final String BASIC_PROPERTY = "handhold";
 
     @Override
@@ -18,18 +20,8 @@ public class MFHarpInstrument implements MFInstruments {
     }
 
     @Override
-    public String[] basicNoteNames() {
-        return new String[]{"c", "d", "e", "f", "g", "a", "b"};
-    }
-
-    @Override
-    public void registerNotes() {
-        for (int octave = getMinOctave(); octave <= getMaxOctave(); octave++) {
-            for (String note : basicNoteNames()) {
-                String soundName = octave + note;
-                MFSoundsRegistry.registerInstrumentNoteSounds(INSTRUMENT_ID, soundName);
-            }
-        }
+    public List<String> getNoteNames() {
+        return allNoteNames();
     }
 
     @Override
@@ -47,7 +39,12 @@ public class MFHarpInstrument implements MFInstruments {
     }
 
     @Override
-    public List<String> getNoteNames() {
-        return allNoteNames();
+    public void registerNotes() {
+        for (int octave = getMinOctave(); octave <= getMaxOctave(); octave++) {
+            for (String note : basicNoteNames()) {
+                String soundName = octave + note;
+                MFSoundsRegistry.registerInstrumentNoteSounds(INSTRUMENT_ID, soundName);
+            }
+        }
     }
 }

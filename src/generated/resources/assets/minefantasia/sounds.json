@@ -41,6 +41,36 @@
     ],
     "subtitle": "key.minefantasia.harp/4g"
   },
+  "harp/4sa": {
+    "sounds": [
+      "minefantasia:harp/4sa"
+    ],
+    "subtitle": "key.minefantasia.harp/4sa"
+  },
+  "harp/4sc": {
+    "sounds": [
+      "minefantasia:harp/4sc"
+    ],
+    "subtitle": "key.minefantasia.harp/4sc"
+  },
+  "harp/4sd": {
+    "sounds": [
+      "minefantasia:harp/4sd"
+    ],
+    "subtitle": "key.minefantasia.harp/4sd"
+  },
+  "harp/4sf": {
+    "sounds": [
+      "minefantasia:harp/4sf"
+    ],
+    "subtitle": "key.minefantasia.harp/4sf"
+  },
+  "harp/4sg": {
+    "sounds": [
+      "minefantasia:harp/4sg"
+    ],
+    "subtitle": "key.minefantasia.harp/4sg"
+  },
   "harp/5a": {
     "sounds": [
       "minefantasia:harp/5a"
@@ -83,6 +113,36 @@
     ],
     "subtitle": "key.minefantasia.harp/5g"
   },
+  "harp/5sa": {
+    "sounds": [
+      "minefantasia:harp/5sa"
+    ],
+    "subtitle": "key.minefantasia.harp/5sa"
+  },
+  "harp/5sc": {
+    "sounds": [
+      "minefantasia:harp/5sc"
+    ],
+    "subtitle": "key.minefantasia.harp/5sc"
+  },
+  "harp/5sd": {
+    "sounds": [
+      "minefantasia:harp/5sd"
+    ],
+    "subtitle": "key.minefantasia.harp/5sd"
+  },
+  "harp/5sf": {
+    "sounds": [
+      "minefantasia:harp/5sf"
+    ],
+    "subtitle": "key.minefantasia.harp/5sf"
+  },
+  "harp/5sg": {
+    "sounds": [
+      "minefantasia:harp/5sg"
+    ],
+    "subtitle": "key.minefantasia.harp/5sg"
+  },
   "harp/6a": {
     "sounds": [
       "minefantasia:harp/6a"
@@ -124,5 +184,251 @@
       "minefantasia:harp/6g"
     ],
     "subtitle": "key.minefantasia.harp/6g"
+  },
+  "harp/6sa": {
+    "sounds": [
+      "minefantasia:harp/6sa"
+    ],
+    "subtitle": "key.minefantasia.harp/6sa"
+  },
+  "harp/6sc": {
+    "sounds": [
+      "minefantasia:harp/6sc"
+    ],
+    "subtitle": "key.minefantasia.harp/6sc"
+  },
+  "harp/6sd": {
+    "sounds": [
+      "minefantasia:harp/6sd"
+    ],
+    "subtitle": "key.minefantasia.harp/6sd"
+  },
+  "harp/6sf": {
+    "sounds": [
+      "minefantasia:harp/6sf"
+    ],
+    "subtitle": "key.minefantasia.harp/6sf"
+  },
+  "harp/6sg": {
+    "sounds": [
+      "minefantasia:harp/6sg"
+    ],
+    "subtitle": "key.minefantasia.harp/6sg"
+  },
+  "kalimba/4a": {
+    "sounds": [
+      "minefantasia:kalimba/4a"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4a"
+  },
+  "kalimba/4b": {
+    "sounds": [
+      "minefantasia:kalimba/4b"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4b"
+  },
+  "kalimba/4c": {
+    "sounds": [
+      "minefantasia:kalimba/4c"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4c"
+  },
+  "kalimba/4d": {
+    "sounds": [
+      "minefantasia:kalimba/4d"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4d"
+  },
+  "kalimba/4e": {
+    "sounds": [
+      "minefantasia:kalimba/4e"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4e"
+  },
+  "kalimba/4f": {
+    "sounds": [
+      "minefantasia:kalimba/4f"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4f"
+  },
+  "kalimba/4g": {
+    "sounds": [
+      "minefantasia:kalimba/4g"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4g"
+  },
+  "kalimba/4sa": {
+    "sounds": [
+      "minefantasia:kalimba/4sa"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4sa"
+  },
+  "kalimba/4sc": {
+    "sounds": [
+      "minefantasia:kalimba/4sc"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4sc"
+  },
+  "kalimba/4sd": {
+    "sounds": [
+      "minefantasia:kalimba/4sd"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4sd"
+  },
+  "kalimba/4sf": {
+    "sounds": [
+      "minefantasia:kalimba/4sf"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4sf"
+  },
+  "kalimba/4sg": {
+    "sounds": [
+      "minefantasia:kalimba/4sg"
+    ],
+    "subtitle": "key.minefantasia.kalimba/4sg"
+  },
+  "kalimba/5a": {
+    "sounds": [
+      "minefantasia:kalimba/5a"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5a"
+  },
+  "kalimba/5b": {
+    "sounds": [
+      "minefantasia:kalimba/5b"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5b"
+  },
+  "kalimba/5c": {
+    "sounds": [
+      "minefantasia:kalimba/5c"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5c"
+  },
+  "kalimba/5d": {
+    "sounds": [
+      "minefantasia:kalimba/5d"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5d"
+  },
+  "kalimba/5e": {
+    "sounds": [
+      "minefantasia:kalimba/5e"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5e"
+  },
+  "kalimba/5f": {
+    "sounds": [
+      "minefantasia:kalimba/5f"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5f"
+  },
+  "kalimba/5g": {
+    "sounds": [
+      "minefantasia:kalimba/5g"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5g"
+  },
+  "kalimba/5sa": {
+    "sounds": [
+      "minefantasia:kalimba/5sa"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5sa"
+  },
+  "kalimba/5sc": {
+    "sounds": [
+      "minefantasia:kalimba/5sc"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5sc"
+  },
+  "kalimba/5sd": {
+    "sounds": [
+      "minefantasia:kalimba/5sd"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5sd"
+  },
+  "kalimba/5sf": {
+    "sounds": [
+      "minefantasia:kalimba/5sf"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5sf"
+  },
+  "kalimba/5sg": {
+    "sounds": [
+      "minefantasia:kalimba/5sg"
+    ],
+    "subtitle": "key.minefantasia.kalimba/5sg"
+  },
+  "kalimba/6a": {
+    "sounds": [
+      "minefantasia:kalimba/6a"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6a"
+  },
+  "kalimba/6b": {
+    "sounds": [
+      "minefantasia:kalimba/6b"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6b"
+  },
+  "kalimba/6c": {
+    "sounds": [
+      "minefantasia:kalimba/6c"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6c"
+  },
+  "kalimba/6d": {
+    "sounds": [
+      "minefantasia:kalimba/6d"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6d"
+  },
+  "kalimba/6e": {
+    "sounds": [
+      "minefantasia:kalimba/6e"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6e"
+  },
+  "kalimba/6f": {
+    "sounds": [
+      "minefantasia:kalimba/6f"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6f"
+  },
+  "kalimba/6g": {
+    "sounds": [
+      "minefantasia:kalimba/6g"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6g"
+  },
+  "kalimba/6sa": {
+    "sounds": [
+      "minefantasia:kalimba/6sa"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6sa"
+  },
+  "kalimba/6sc": {
+    "sounds": [
+      "minefantasia:kalimba/6sc"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6sc"
+  },
+  "kalimba/6sd": {
+    "sounds": [
+      "minefantasia:kalimba/6sd"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6sd"
+  },
+  "kalimba/6sf": {
+    "sounds": [
+      "minefantasia:kalimba/6sf"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6sf"
+  },
+  "kalimba/6sg": {
+    "sounds": [
+      "minefantasia:kalimba/6sg"
+    ],
+    "subtitle": "key.minefantasia.kalimba/6sg"
   }
 }

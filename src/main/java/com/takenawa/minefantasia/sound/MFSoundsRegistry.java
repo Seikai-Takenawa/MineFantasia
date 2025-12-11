@@ -1,6 +1,9 @@
 package com.takenawa.minefantasia.sound;
 
 import com.takenawa.minefantasia.MineFantasia;
+import com.takenawa.minefantasia.instrument.MFHarpInstrument;
+import com.takenawa.minefantasia.instrument.MFInstruments;
+import com.takenawa.minefantasia.instrument.MFKalimbaInstrument;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -24,6 +27,7 @@ public class MFSoundsRegistry {
 
     static {
         registerInstrument(new MFHarpInstrument());
+        registerInstrument(new MFKalimbaInstrument());
     }
 
     public static void registerAllNoteSounds() {

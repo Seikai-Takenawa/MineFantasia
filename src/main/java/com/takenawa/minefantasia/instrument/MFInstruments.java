@@ -1,4 +1,4 @@
-package com.takenawa.minefantasia.sound;
+package com.takenawa.minefantasia.instrument;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ public interface MFInstruments {
     String getInstrumentId();
     String getBasicProperty();
     List<String> getNoteNames();
+    List<String> allNoteNames();
     void registerNotes();
 
     default int getMinOctave() {
@@ -17,11 +18,6 @@ public interface MFInstruments {
     }
 
     default String[] basicNoteNames() {
-        return new String[]{"c", "uc", "d", "ud", "e", "f", "uf", "g", "ug", "a", "ua", "b"};
+        return new String[]{"c", "sc", "d", "sd", "e", "f", "sf", "g", "sg", "a", "sa", "b"};
     }
-
-    default List<String> allNoteNames() {
-        return List.of(new String[]{});
-    }
-
 }

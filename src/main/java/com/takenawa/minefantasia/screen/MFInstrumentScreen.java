@@ -68,7 +68,7 @@ public class MFInstrumentScreen extends Screen {
                 120, 20,
                 Component.translatable("screen.minefantasia.note_input")
         );
-        noteInputBox.setMaxLength(2);
+        noteInputBox.setMaxLength(3);
         noteInputBox.setVisible(isSettingMode);
         noteInputBox.setCanLoseFocus(true);
         this.addRenderableWidget(noteInputBox);

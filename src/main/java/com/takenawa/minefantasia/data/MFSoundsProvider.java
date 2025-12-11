@@ -1,7 +1,9 @@
 package com.takenawa.minefantasia.data;
 
 import com.takenawa.minefantasia.MineFantasia;
-import com.takenawa.minefantasia.sound.MFHarpInstrument;
+import com.takenawa.minefantasia.instrument.MFHarpInstrument;
+import com.takenawa.minefantasia.instrument.MFInstruments;
+import com.takenawa.minefantasia.instrument.MFKalimbaInstrument;
 import com.takenawa.minefantasia.sound.MFSoundsRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -16,12 +18,12 @@ public class MFSoundsProvider extends SoundDefinitionsProvider {
 
     @Override
     public void registerSounds() {
-        registerHarpNoteSounds();
+        registerInstrumentNoteSounds(new MFHarpInstrument());
+        registerInstrumentNoteSounds(new MFKalimbaInstrument());
     }
 
-    private void registerHarpNoteSounds() {
-        MFHarpInstrument harp = new MFHarpInstrument();
-        List<String> noteRegisterNames = harp.getNoteNames();
+    private void registerInstrumentNoteSounds(MFInstruments instrument) {
+        List<String> noteRegisterNames = instrument.getNoteNames();
 
         for (String noteRegisterName : noteRegisterNames) {
             ResourceLocation soundFileLocation = MFSoundsRegistry.getRegisterEvent(noteRegisterName).get().location();
@@ -34,6 +36,6 @@ public class MFSoundsProvider extends SoundDefinitionsProvider {
 
             MineFantasia.LOGGER.info("Registered sound definition: {}", noteRegisterName);
         }
-        MineFantasia.LOGGER.info("Registered {} harp sound definitions", noteRegisterNames.size());
+        MineFantasia.LOGGER.info("Registered {} {} sound definitions", noteRegisterNames.size(), instrument.getInstrumentId());
     }
 }
