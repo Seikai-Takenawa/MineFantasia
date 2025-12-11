@@ -7,7 +7,6 @@ import com.takenawa.minefantasia.screen.MFInstrumentScreen;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
@@ -116,17 +115,14 @@ public class MFInstrumentClientHandler {
 
     @SubscribeEvent
     public static void onPlaySound(PlaySoundEvent event) {
-        SoundInstance sound = event.getSound();
         if (isPlaying) {
-            if (sound != null && sound.getSource() == SoundSource.MUSIC) {
-                pauseBackgroundMusic(sound);
-            }
+            pauseBackgroundMusic();
         }
     }
 
-    private static void pauseBackgroundMusic(SoundInstance sound) {
+    private static void pauseBackgroundMusic() {
         Minecraft mc = Minecraft.getInstance();
-        mc.getSoundManager().stop(sound);
+        mc.getSoundManager().stop(null, SoundSource.MUSIC);
     }
 
     private static void resumeBackgroundMusic() {

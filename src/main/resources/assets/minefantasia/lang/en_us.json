@@ -11,5 +11,8 @@
   "minefantasia.configuration.magicNumberIntroduction": "Magic Number Text",
   "minefantasia.configuration.magicNumber": "Magic Number",
 
-  "screen.minefantasia.harp": ""
+  "screen.minefantasia.harp": "Harp",
+  "screen.minefantasia.note_input": "Input Note",
+  "screen.minefantasia.setting_mode": "Setting Mode",
+  "screen.minefantasia.playing_mode": "Playing Mode"
 }
