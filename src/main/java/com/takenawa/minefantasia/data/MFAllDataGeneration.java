@@ -18,5 +18,15 @@ public class MFAllDataGeneration {
                 true,
                 new MFSoundsProvider(output)
         );
+
+        generator.addProvider(
+                true,
+                new MFBiomeTagsProvider(output, event.getLookupProvider())
+        );
+
+        generator.addProvider(
+                true,
+                new MFStructureDefineGeneration(output, event.getLookupProvider())
+        );
     }
 }

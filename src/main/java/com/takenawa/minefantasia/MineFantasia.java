@@ -4,8 +4,10 @@ import com.takenawa.minefantasia.block.MFBlocksRegistry;
 import com.takenawa.minefantasia.item.MFItemsRegistry;
 import com.takenawa.minefantasia.sound.MFSoundsRegistry;
 import com.takenawa.minefantasia.tab.MFCreativeModTab;
+import com.takenawa.minefantasia.worldgen.structure.MFStructurePieceTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -24,6 +26,7 @@ public class MineFantasia {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<SoundEvent>  SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    public static final DeferredRegister<StructurePieceType> STRUCTURE_PIECE_TYPES = DeferredRegister.create(Registries.STRUCTURE_PIECE, MineFantasia.MODID);
 
     public MineFantasia(IEventBus modEventBus) {
         MFBlocksRegistry.registerModBlocks();
@@ -34,5 +37,7 @@ public class MineFantasia {
         SOUNDS.register(modEventBus);
         MFCreativeModTab.registerModCreativeModeTabs();
         CREATIVE_MODE_TABS.register(modEventBus);
+        MFStructurePieceTypes.registerModStructurePieceType();
+        STRUCTURE_PIECE_TYPES.register(modEventBus);
     }
 }
