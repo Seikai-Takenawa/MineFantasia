@@ -16,7 +16,7 @@ public class MFInstrumentItem extends Item {
     private final String instrumentId;
 
     public MFInstrumentItem(Properties properties, String instrumentId) {
-        super(properties.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MineFantasia.MODID, instrumentId))));
+        super(properties.stacksTo(1).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MineFantasia.MODID, instrumentId))));
         this.instrumentId = instrumentId;
     }
 

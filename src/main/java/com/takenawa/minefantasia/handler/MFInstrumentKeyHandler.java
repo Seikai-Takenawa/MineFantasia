@@ -2,7 +2,7 @@ package com.takenawa.minefantasia.handler;
 
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.mapping.MFKeyToNoteMapping;
-import com.takenawa.minefantasia.sound.MFSoundsRegistry;
+import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -80,7 +80,7 @@ public class MFInstrumentKeyHandler {
             String instrumentId = MFInstrumentClientHandler.getCurrentInstrumentId();
             if (instrumentId != null) {
                 String registerName = instrumentId + "/" + note;
-                var soundEvent = MFSoundsRegistry.getRegisterEvent(registerName);
+                var soundEvent = MFInstrumentNoteSoundsRegistry.getRegisterEvent(registerName);
 
                 if (soundEvent != null) {
                     Minecraft mc = Minecraft.getInstance();

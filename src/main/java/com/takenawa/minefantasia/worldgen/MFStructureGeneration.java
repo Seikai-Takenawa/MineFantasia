@@ -71,8 +71,8 @@ public class MFStructureGeneration {
         StructureSet concertHallSet = new StructureSet(
                 structureRegistry.getOrThrow(CONCERT_HALL),
                 new RandomSpreadStructurePlacement(
-                        24,
-                        8,
+                        32,
+                        12,
                         RandomSpreadType.LINEAR,
                         0
                 )

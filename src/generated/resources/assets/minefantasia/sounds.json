@@ -430,5 +430,365 @@
       "minefantasia:kalimba/6sg"
     ],
     "subtitle": "key.minefantasia.kalimba/6sg"
+  },
+  "piano/3a": {
+    "sounds": [
+      "minefantasia:piano/3a"
+    ],
+    "subtitle": "key.minefantasia.piano/3a"
+  },
+  "piano/3b": {
+    "sounds": [
+      "minefantasia:piano/3b"
+    ],
+    "subtitle": "key.minefantasia.piano/3b"
+  },
+  "piano/3c": {
+    "sounds": [
+      "minefantasia:piano/3c"
+    ],
+    "subtitle": "key.minefantasia.piano/3c"
+  },
+  "piano/3d": {
+    "sounds": [
+      "minefantasia:piano/3d"
+    ],
+    "subtitle": "key.minefantasia.piano/3d"
+  },
+  "piano/3e": {
+    "sounds": [
+      "minefantasia:piano/3e"
+    ],
+    "subtitle": "key.minefantasia.piano/3e"
+  },
+  "piano/3f": {
+    "sounds": [
+      "minefantasia:piano/3f"
+    ],
+    "subtitle": "key.minefantasia.piano/3f"
+  },
+  "piano/3g": {
+    "sounds": [
+      "minefantasia:piano/3g"
+    ],
+    "subtitle": "key.minefantasia.piano/3g"
+  },
+  "piano/3sa": {
+    "sounds": [
+      "minefantasia:piano/3sa"
+    ],
+    "subtitle": "key.minefantasia.piano/3sa"
+  },
+  "piano/3sc": {
+    "sounds": [
+      "minefantasia:piano/3sc"
+    ],
+    "subtitle": "key.minefantasia.piano/3sc"
+  },
+  "piano/3sd": {
+    "sounds": [
+      "minefantasia:piano/3sd"
+    ],
+    "subtitle": "key.minefantasia.piano/3sd"
+  },
+  "piano/3sf": {
+    "sounds": [
+      "minefantasia:piano/3sf"
+    ],
+    "subtitle": "key.minefantasia.piano/3sf"
+  },
+  "piano/3sg": {
+    "sounds": [
+      "minefantasia:piano/3sg"
+    ],
+    "subtitle": "key.minefantasia.piano/3sg"
+  },
+  "piano/4a": {
+    "sounds": [
+      "minefantasia:piano/4a"
+    ],
+    "subtitle": "key.minefantasia.piano/4a"
+  },
+  "piano/4b": {
+    "sounds": [
+      "minefantasia:piano/4b"
+    ],
+    "subtitle": "key.minefantasia.piano/4b"
+  },
+  "piano/4c": {
+    "sounds": [
+      "minefantasia:piano/4c"
+    ],
+    "subtitle": "key.minefantasia.piano/4c"
+  },
+  "piano/4d": {
+    "sounds": [
+      "minefantasia:piano/4d"
+    ],
+    "subtitle": "key.minefantasia.piano/4d"
+  },
+  "piano/4e": {
+    "sounds": [
+      "minefantasia:piano/4e"
+    ],
+    "subtitle": "key.minefantasia.piano/4e"
+  },
+  "piano/4f": {
+    "sounds": [
+      "minefantasia:piano/4f"
+    ],
+    "subtitle": "key.minefantasia.piano/4f"
+  },
+  "piano/4g": {
+    "sounds": [
+      "minefantasia:piano/4g"
+    ],
+    "subtitle": "key.minefantasia.piano/4g"
+  },
+  "piano/4sa": {
+    "sounds": [
+      "minefantasia:piano/4sa"
+    ],
+    "subtitle": "key.minefantasia.piano/4sa"
+  },
+  "piano/4sc": {
+    "sounds": [
+      "minefantasia:piano/4sc"
+    ],
+    "subtitle": "key.minefantasia.piano/4sc"
+  },
+  "piano/4sd": {
+    "sounds": [
+      "minefantasia:piano/4sd"
+    ],
+    "subtitle": "key.minefantasia.piano/4sd"
+  },
+  "piano/4sf": {
+    "sounds": [
+      "minefantasia:piano/4sf"
+    ],
+    "subtitle": "key.minefantasia.piano/4sf"
+  },
+  "piano/4sg": {
+    "sounds": [
+      "minefantasia:piano/4sg"
+    ],
+    "subtitle": "key.minefantasia.piano/4sg"
+  },
+  "piano/5a": {
+    "sounds": [
+      "minefantasia:piano/5a"
+    ],
+    "subtitle": "key.minefantasia.piano/5a"
+  },
+  "piano/5b": {
+    "sounds": [
+      "minefantasia:piano/5b"
+    ],
+    "subtitle": "key.minefantasia.piano/5b"
+  },
+  "piano/5c": {
+    "sounds": [
+      "minefantasia:piano/5c"
+    ],
+    "subtitle": "key.minefantasia.piano/5c"
+  },
+  "piano/5d": {
+    "sounds": [
+      "minefantasia:piano/5d"
+    ],
+    "subtitle": "key.minefantasia.piano/5d"
+  },
+  "piano/5e": {
+    "sounds": [
+      "minefantasia:piano/5e"
+    ],
+    "subtitle": "key.minefantasia.piano/5e"
+  },
+  "piano/5f": {
+    "sounds": [
+      "minefantasia:piano/5f"
+    ],
+    "subtitle": "key.minefantasia.piano/5f"
+  },
+  "piano/5g": {
+    "sounds": [
+      "minefantasia:piano/5g"
+    ],
+    "subtitle": "key.minefantasia.piano/5g"
+  },
+  "piano/5sa": {
+    "sounds": [
+      "minefantasia:piano/5sa"
+    ],
+    "subtitle": "key.minefantasia.piano/5sa"
+  },
+  "piano/5sc": {
+    "sounds": [
+      "minefantasia:piano/5sc"
+    ],
+    "subtitle": "key.minefantasia.piano/5sc"
+  },
+  "piano/5sd": {
+    "sounds": [
+      "minefantasia:piano/5sd"
+    ],
+    "subtitle": "key.minefantasia.piano/5sd"
+  },
+  "piano/5sf": {
+    "sounds": [
+      "minefantasia:piano/5sf"
+    ],
+    "subtitle": "key.minefantasia.piano/5sf"
+  },
+  "piano/5sg": {
+    "sounds": [
+      "minefantasia:piano/5sg"
+    ],
+    "subtitle": "key.minefantasia.piano/5sg"
+  },
+  "piano/6a": {
+    "sounds": [
+      "minefantasia:piano/6a"
+    ],
+    "subtitle": "key.minefantasia.piano/6a"
+  },
+  "piano/6b": {
+    "sounds": [
+      "minefantasia:piano/6b"
+    ],
+    "subtitle": "key.minefantasia.piano/6b"
+  },
+  "piano/6c": {
+    "sounds": [
+      "minefantasia:piano/6c"
+    ],
+    "subtitle": "key.minefantasia.piano/6c"
+  },
+  "piano/6d": {
+    "sounds": [
+      "minefantasia:piano/6d"
+    ],
+    "subtitle": "key.minefantasia.piano/6d"
+  },
+  "piano/6e": {
+    "sounds": [
+      "minefantasia:piano/6e"
+    ],
+    "subtitle": "key.minefantasia.piano/6e"
+  },
+  "piano/6f": {
+    "sounds": [
+      "minefantasia:piano/6f"
+    ],
+    "subtitle": "key.minefantasia.piano/6f"
+  },
+  "piano/6g": {
+    "sounds": [
+      "minefantasia:piano/6g"
+    ],
+    "subtitle": "key.minefantasia.piano/6g"
+  },
+  "piano/6sa": {
+    "sounds": [
+      "minefantasia:piano/6sa"
+    ],
+    "subtitle": "key.minefantasia.piano/6sa"
+  },
+  "piano/6sc": {
+    "sounds": [
+      "minefantasia:piano/6sc"
+    ],
+    "subtitle": "key.minefantasia.piano/6sc"
+  },
+  "piano/6sd": {
+    "sounds": [
+      "minefantasia:piano/6sd"
+    ],
+    "subtitle": "key.minefantasia.piano/6sd"
+  },
+  "piano/6sf": {
+    "sounds": [
+      "minefantasia:piano/6sf"
+    ],
+    "subtitle": "key.minefantasia.piano/6sf"
+  },
+  "piano/6sg": {
+    "sounds": [
+      "minefantasia:piano/6sg"
+    ],
+    "subtitle": "key.minefantasia.piano/6sg"
+  },
+  "piano/7a": {
+    "sounds": [
+      "minefantasia:piano/7a"
+    ],
+    "subtitle": "key.minefantasia.piano/7a"
+  },
+  "piano/7b": {
+    "sounds": [
+      "minefantasia:piano/7b"
+    ],
+    "subtitle": "key.minefantasia.piano/7b"
+  },
+  "piano/7c": {
+    "sounds": [
+      "minefantasia:piano/7c"
+    ],
+    "subtitle": "key.minefantasia.piano/7c"
+  },
+  "piano/7d": {
+    "sounds": [
+      "minefantasia:piano/7d"
+    ],
+    "subtitle": "key.minefantasia.piano/7d"
+  },
+  "piano/7e": {
+    "sounds": [
+      "minefantasia:piano/7e"
+    ],
+    "subtitle": "key.minefantasia.piano/7e"
+  },
+  "piano/7f": {
+    "sounds": [
+      "minefantasia:piano/7f"
+    ],
+    "subtitle": "key.minefantasia.piano/7f"
+  },
+  "piano/7g": {
+    "sounds": [
+      "minefantasia:piano/7g"
+    ],
+    "subtitle": "key.minefantasia.piano/7g"
+  },
+  "piano/7sa": {
+    "sounds": [
+      "minefantasia:piano/7sa"
+    ],
+    "subtitle": "key.minefantasia.piano/7sa"
+  },
+  "piano/7sc": {
+    "sounds": [
+      "minefantasia:piano/7sc"
+    ],
+    "subtitle": "key.minefantasia.piano/7sc"
+  },
+  "piano/7sd": {
+    "sounds": [
+      "minefantasia:piano/7sd"
+    ],
+    "subtitle": "key.minefantasia.piano/7sd"
+  },
+  "piano/7sf": {
+    "sounds": [
+      "minefantasia:piano/7sf"
+    ],
+    "subtitle": "key.minefantasia.piano/7sf"
+  },
+  "piano/7sg": {
+    "sounds": [
+      "minefantasia:piano/7sg"
+    ],
+    "subtitle": "key.minefantasia.piano/7sg"
   }
 }

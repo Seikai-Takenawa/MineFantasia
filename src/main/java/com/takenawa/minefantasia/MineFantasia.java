@@ -2,7 +2,7 @@ package com.takenawa.minefantasia;
 
 import com.takenawa.minefantasia.block.MFBlocksRegistry;
 import com.takenawa.minefantasia.item.MFItemsRegistry;
-import com.takenawa.minefantasia.sound.MFSoundsRegistry;
+import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import com.takenawa.minefantasia.tab.MFCreativeModTab;
 import com.takenawa.minefantasia.worldgen.structure.MFStructurePieceTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -33,7 +33,7 @@ public class MineFantasia {
         BLOCKS.register(modEventBus);
         MFItemsRegistry.registerModItems();
         ITEMS.register(modEventBus);
-        MFSoundsRegistry.registerModSounds();
+        MFInstrumentNoteSoundsRegistry.registerModSounds();
         SOUNDS.register(modEventBus);
         MFCreativeModTab.registerModCreativeModeTabs();
         CREATIVE_MODE_TABS.register(modEventBus);

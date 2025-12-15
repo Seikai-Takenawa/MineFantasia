@@ -1,6 +1,6 @@
 package com.takenawa.minefantasia.instrument;
 
-import com.takenawa.minefantasia.sound.MFSoundsRegistry;
+import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class MFHarpInstrument implements MFInstruments {
         for (int octave = getMinOctave(); octave <= getMaxOctave(); octave++) {
             for (String note : basicNoteNames()) {
                 String soundName = octave + note;
-                MFSoundsRegistry.registerInstrumentNoteSounds(INSTRUMENT_ID, soundName);
+                MFInstrumentNoteSoundsRegistry.registerInstrumentNoteSounds(INSTRUMENT_ID, soundName);
             }
         }
     }

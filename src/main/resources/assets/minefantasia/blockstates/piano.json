@@ -1,0 +1,19 @@
+{
+  "variants": {
+      "facing=north":{
+        "model": "minefantasia:block/piano"
+      },
+      "facing=east":{
+        "model": "minefantasia:block/piano",
+        "y": 90
+      },
+      "facing=south":{
+        "model": "minefantasia:block/piano",
+        "y": 180
+      },
+      "facing=west":{
+        "model": "minefantasia:block/piano",
+        "y": 270
+      }
+  }
+}

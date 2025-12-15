@@ -19,12 +19,9 @@ import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 @EventBusSubscriber(modid = MineFantasia.MODID)
 public class MFInstrumentClientHandler {
     private static boolean isPlaying = false;
+    private static boolean isPlayingPiano = false;
     private static String currentInstrumentId = null;
     private static CameraType previousCameraType = null;
-
-    public static boolean isPlayingInstrument() {
-        return isPlaying;
-    }
 
     public static String getCurrentInstrumentId() {
         return currentInstrumentId;
@@ -52,7 +49,7 @@ public class MFInstrumentClientHandler {
         Window window = mc.getWindow();
         window.setAllowCursorChanges(false);
 
-        Minecraft.getInstance().setScreen(new MFInstrumentScreen(Component.translatable("screen.minefantasia.harp")));
+        Minecraft.getInstance().setScreen(new MFInstrumentScreen(Component.literal("Perform" + instrumentId)));
     }
 
     public static void stopPlaying() {
@@ -96,7 +93,7 @@ public class MFInstrumentClientHandler {
 
         if (isPlaying) {
             ItemStack mainHandItem = player.getMainHandItem();
-            if (!(mainHandItem.getItem() instanceof MFInstrumentItem)) {
+            if (!(mainHandItem.getItem() instanceof MFInstrumentItem) && !isPlayingPiano) {
                 stopPlaying();
             }
         }
@@ -133,5 +130,9 @@ public class MFInstrumentClientHandler {
     private static void clearAllSounds() {
         Minecraft mc = Minecraft.getInstance();
         mc.getSoundManager().stop();
+    }
+
+    public static void setIsPlayingPiano(boolean bool) {
+        MFInstrumentClientHandler.isPlayingPiano = bool;
     }
 }

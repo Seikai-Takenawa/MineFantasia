@@ -4,6 +4,7 @@ import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.instrument.MFHarpInstrument;
 import com.takenawa.minefantasia.instrument.MFInstruments;
 import com.takenawa.minefantasia.instrument.MFKalimbaInstrument;
+import com.takenawa.minefantasia.instrument.MFPianoInstrument;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class MFSoundsRegistry {
+public class MFInstrumentNoteSoundsRegistry {
     private static final DeferredRegister<SoundEvent> SOUND = MineFantasia.SOUNDS;
 
     private static final Map<String, Supplier<SoundEvent>> NOTE_SOUND_REGISTRY = new HashMap<>();
@@ -28,6 +29,7 @@ public class MFSoundsRegistry {
     static {
         registerInstrument(new MFHarpInstrument());
         registerInstrument(new MFKalimbaInstrument());
+        registerInstrument(new MFPianoInstrument());
     }
 
     public static void registerAllNoteSounds() {

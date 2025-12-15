@@ -1,6 +1,8 @@
 package com.takenawa.minefantasia.data;
 
 import com.takenawa.minefantasia.MineFantasia;
+import com.takenawa.minefantasia.data.worldgen.MFBiomeTagsProvider;
+import com.takenawa.minefantasia.data.worldgen.MFStructureDefineGeneration;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -16,7 +18,7 @@ public class MFAllDataGeneration {
 
         generator.addProvider(
                 true,
-                new MFSoundsProvider(output)
+                new MFInstrumentNoteSoundsDefinitionProvider(output)
         );
 
         generator.addProvider(

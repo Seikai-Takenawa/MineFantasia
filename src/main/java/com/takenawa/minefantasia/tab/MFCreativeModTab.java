@@ -14,9 +14,11 @@ public class MFCreativeModTab {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = CREATIVE_MODE_TAB.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.minefantasia"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> MFItemsRegistry.PIANO.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(MFItemsRegistry.HARP);
-                output.accept(MFItemsRegistry.KALIMBA);
+                output.accept(MFItemsRegistry.HARP.get());
+                output.accept(MFItemsRegistry.KALIMBA.get());
+                output.accept(MFItemsRegistry.PIANO.get());
             }).build());
 
     public static void registerModCreativeModeTabs() {

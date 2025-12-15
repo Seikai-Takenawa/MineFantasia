@@ -1,4 +1,4 @@
-package com.takenawa.minefantasia.data;
+package com.takenawa.minefantasia.data.worldgen;
 
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.worldgen.MFBiomeTags;

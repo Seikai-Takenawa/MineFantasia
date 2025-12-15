@@ -6,5 +6,7 @@
   "screen.minefantasia.playing_mode": "Playing Mode",
 
   "item.minefantasia.harp": "Harp",
-  "item.minefantasia.kalimba": "Kalimba"
+  "item.minefantasia.kalimba": "Kalimba",
+
+  "block.minefantasia.piano": "piano"
 }
