@@ -4,6 +4,7 @@
   "screen.minefantasia.note_input": "Input Note",
   "screen.minefantasia.setting_mode": "Setting Mode",
   "screen.minefantasia.playing_mode": "Playing Mode",
+  "minefantasia.networking.failed": "Handle network payload failed",
 
   "item.minefantasia.harp": "Harp",
   "item.minefantasia.kalimba": "Kalimba",

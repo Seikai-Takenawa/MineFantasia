@@ -3,20 +3,21 @@ package com.takenawa.minefantasia.handler;
 import com.mojang.blaze3d.platform.Window;
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.item.MFInstrumentItem;
-import com.takenawa.minefantasia.screen.MFInstrumentScreen;
+import com.takenawa.minefantasia.screen.MFInstrumentPlayingScreen;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 
-@EventBusSubscriber(modid = MineFantasia.MODID)
+@EventBusSubscriber(modid = MineFantasia.MODID, value = Dist.CLIENT)
 public class MFInstrumentClientHandler {
     private static boolean isPlaying = false;
     private static boolean isPlayingPiano = false;
@@ -49,7 +50,7 @@ public class MFInstrumentClientHandler {
         Window window = mc.getWindow();
         window.setAllowCursorChanges(false);
 
-        Minecraft.getInstance().setScreen(new MFInstrumentScreen(Component.literal("Perform" + instrumentId)));
+        Minecraft.getInstance().setScreen(new MFInstrumentPlayingScreen(Component.literal("")));
     }
 
     public static void stopPlaying() {

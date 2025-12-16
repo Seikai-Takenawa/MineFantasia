@@ -4,6 +4,7 @@
   "screen.minefantasia.note_input": "音符输入",
   "screen.minefantasia.setting_mode": "设置模式",
   "screen.minefantasia.playing_mode": "演奏模式",
+  "minefantasia.networking.failed": "Handle network payload failed",
 
   "item.minefantasia.harp": "竖琴",
   "item.minefantasia.kalimba": "卡林巴琴",

@@ -2,6 +2,7 @@ package com.takenawa.minefantasia;
 
 import com.takenawa.minefantasia.block.MFBlocksRegistry;
 import com.takenawa.minefantasia.item.MFItemsRegistry;
+import com.takenawa.minefantasia.network.MFNetworkHandler;
 import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import com.takenawa.minefantasia.tab.MFCreativeModTab;
 import com.takenawa.minefantasia.worldgen.structure.MFStructurePieceTypes;
@@ -39,5 +40,7 @@ public class MineFantasia {
         CREATIVE_MODE_TABS.register(modEventBus);
         MFStructurePieceTypes.registerModStructurePieceType();
         STRUCTURE_PIECE_TYPES.register(modEventBus);
+
+        modEventBus.register(MFNetworkHandler.class);
     }
 }

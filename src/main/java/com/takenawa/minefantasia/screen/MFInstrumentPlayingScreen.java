@@ -3,6 +3,7 @@ package com.takenawa.minefantasia.screen;
 import com.takenawa.minefantasia.handler.MFInstrumentClientHandler;
 import com.takenawa.minefantasia.handler.MFInstrumentKeyHandler;
 import com.takenawa.minefantasia.mapping.MFKeyToNoteMapping;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
@@ -16,7 +17,7 @@ import org.lwjgl.glfw.GLFW;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MFInstrumentScreen extends Screen {
+public class MFInstrumentPlayingScreen extends Screen {
     private boolean isSettingMode = false;
     private int selectedKeyCode = -1;
     private EditBox noteInputBox;
@@ -26,7 +27,9 @@ public class MFInstrumentScreen extends Screen {
     private final int rows = 3;
     private final int cols = 7;
     private int settingsButtonX, settingsButtonY;
+    private int eyeButtonX, eyeButtonY;
     private final int settingsButtonSize = 20;
+    private final int eyeButtonSize = 20;
     private final Map<Integer, Long> pressedKeys = new HashMap<>();
     private static final Map<Integer, Integer[]> KEY_MAPPING = new HashMap<>();
     private static final long KEY_PRESS_DURATION = 150;
@@ -37,7 +40,7 @@ public class MFInstrumentScreen extends Screen {
         KEY_MAPPING.put(2, new Integer[]{90, 88, 67, 86, 66, 78, 77});  // Z,X,C,V,B,N,M
     }
 
-    public MFInstrumentScreen(Component title) {
+    public MFInstrumentPlayingScreen(Component title) {
         super(title);
     }
 
@@ -61,6 +64,9 @@ public class MFInstrumentScreen extends Screen {
 
         settingsButtonX = this.width - settingsButtonSize - 10;
         settingsButtonY = this.height - settingsButtonSize - 10;
+
+        eyeButtonX = settingsButtonX;
+        eyeButtonY = settingsButtonY - eyeButtonSize - 10;
 
         noteInputBox = new EditBox(
                 this.font,
@@ -90,6 +96,12 @@ public class MFInstrumentScreen extends Screen {
 
             if (clickedInputBox) {
                 noteInputBox.setFocused(true);
+                return true;
+            }
+
+            if (isMouseOverEyeButton(event.x(), event.y())) {
+                this.onClose();
+                Minecraft.getInstance().setScreen(new MFInstrumentHidedPlayingScreen(Component.literal("")));
                 return true;
             }
 
@@ -306,6 +318,7 @@ public class MFInstrumentScreen extends Screen {
 
         this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         renderSettingsButton(guiGraphics, mouseX, mouseY);
+        renderEyeButton(guiGraphics, mouseX, mouseY);
 
         if (selectedKeyCode != -1) {
             for (int row = 0; row < rows; row++) {
@@ -377,32 +390,7 @@ public class MFInstrumentScreen extends Screen {
             buttonColor = 0x4A32CD32;
         }
 
-        guiGraphics.fillGradient(
-                settingsButtonX, settingsButtonY,
-                settingsButtonX + settingsButtonSize, settingsButtonY + settingsButtonSize,
-                buttonColor, buttonColor
-        );
-
-        guiGraphics.fillGradient(
-                settingsButtonX, settingsButtonY,
-                settingsButtonX + settingsButtonSize, settingsButtonY + 1,
-                borderColor, borderColor
-        );
-        guiGraphics.fillGradient(
-                settingsButtonX, settingsButtonY,
-                settingsButtonX + 1, settingsButtonY + settingsButtonSize,
-                borderColor, borderColor
-        );
-        guiGraphics.fillGradient(
-                settingsButtonX + settingsButtonSize - 1, settingsButtonY,
-                settingsButtonX + settingsButtonSize, settingsButtonY + settingsButtonSize,
-                borderColor, borderColor
-        );
-        guiGraphics.fillGradient(
-                settingsButtonX, settingsButtonY + settingsButtonSize - 1,
-                settingsButtonX + settingsButtonSize, settingsButtonY + settingsButtonSize,
-                borderColor, borderColor
-        );
+        renderButtonBackground(guiGraphics, buttonColor, borderColor, settingsButtonX, settingsButtonY);
 
         String gearSymbol = "⚙";
         int textX = settingsButtonX + settingsButtonSize / 2 - 4;
@@ -410,9 +398,61 @@ public class MFInstrumentScreen extends Screen {
         guiGraphics.drawString(this.font, gearSymbol, textX, textY, 0xFF000000, false);
     }
 
+    private void renderEyeButton(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+        int buttonColor = 0x4A808080;
+        int borderColor = 0xFFFFFFFF;
+
+        if (isMouseOverEyeButton(mouseX, mouseY)) {
+            buttonColor = 0x4AFFA500;
+            borderColor = 0xFFFFFF00;
+        }
+
+        renderButtonBackground(guiGraphics, buttonColor, borderColor, eyeButtonX, eyeButtonY);
+
+        String eyeSymbol = "👁";
+        int textX = eyeButtonX + eyeButtonSize / 2 - 4;
+        int textY = eyeButtonY + eyeButtonSize / 2 - 4;
+        guiGraphics.drawString(this.font, eyeSymbol, textX, textY, 0xFF000000, false);
+    }
+
+    private void renderButtonBackground(GuiGraphics guiGraphics, int buttonColor, int borderColor, int eyeButtonX, int eyeButtonY) {
+        guiGraphics.fillGradient(
+                eyeButtonX, eyeButtonY,
+                eyeButtonX + 20, eyeButtonY + 20,
+                buttonColor, buttonColor
+        );
+
+        guiGraphics.fillGradient(
+                eyeButtonX, eyeButtonY,
+                eyeButtonX + 20, eyeButtonY + 1,
+                borderColor, borderColor
+        );
+        guiGraphics.fillGradient(
+                eyeButtonX, eyeButtonY,
+                eyeButtonX + 1, eyeButtonY + 20,
+                borderColor, borderColor
+        );
+        guiGraphics.fillGradient(
+                eyeButtonX + 20 - 1, eyeButtonY,
+                eyeButtonX + 20, eyeButtonY + 20,
+                borderColor, borderColor
+        );
+        guiGraphics.fillGradient(
+                eyeButtonX, eyeButtonY + 20 - 1,
+                eyeButtonX + 20, eyeButtonY + 20,
+                borderColor, borderColor
+        );
+    }
+
+
     private boolean isMouseOverSettingsButton(double mouseX, double mouseY) {
         return mouseX >= settingsButtonX && mouseX <= settingsButtonX + settingsButtonSize &&
                 mouseY >= settingsButtonY && mouseY <= settingsButtonY + settingsButtonSize;
+    }
+
+    private boolean isMouseOverEyeButton(double mouseX, double mouseY) {
+        return mouseX >= eyeButtonX && mouseX <= eyeButtonX + eyeButtonSize &&
+                mouseY >= eyeButtonY && mouseY <= eyeButtonY + eyeButtonSize;
     }
 
     private boolean isMouseOverBlock(double mouseX, double mouseY, int row, int col) {

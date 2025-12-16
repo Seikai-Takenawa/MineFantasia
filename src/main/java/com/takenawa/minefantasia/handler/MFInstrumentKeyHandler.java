@@ -2,6 +2,7 @@ package com.takenawa.minefantasia.handler;
 
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.mapping.MFKeyToNoteMapping;
+import com.takenawa.minefantasia.network.MFNetworkHelper;
 import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -76,6 +77,7 @@ public class MFInstrumentKeyHandler {
 */
     public static void playNoteForKey(int keyCode) {
         String note = MFKeyToNoteMapping.getNoteForKey(keyCode);
+        LocalPlayer player = null;
         if (note != null) {
             String instrumentId = MFInstrumentClientHandler.getCurrentInstrumentId();
             if (instrumentId != null) {
@@ -84,7 +86,7 @@ public class MFInstrumentKeyHandler {
 
                 if (soundEvent != null) {
                     Minecraft mc = Minecraft.getInstance();
-                    LocalPlayer player = mc.player;
+                    player = mc.player;
 
                     if (player != null) {
                         player.level().playSound(
@@ -98,6 +100,13 @@ public class MFInstrumentKeyHandler {
                     }
                 }
             }
+        }
+        if (player != null && !player.level().isClientSide()) {
+            return;
+        }
+        if (note != null) {
+            String instrumentId = MFInstrumentClientHandler.getCurrentInstrumentId();
+            MFNetworkHelper.sendNoteToServer(instrumentId, note);
         }
     }
 }
