@@ -19,6 +19,21 @@ public class MFItemsRegistry {
     public static final DeferredItem<BlockItem> PIANO = ITEM.registerSimpleBlockItem("piano",
             MFBlocksRegistry.PIANO);
 
+    public static final DeferredItem<BlockItem> PCB_WHITE = ITEM.registerSimpleBlockItem("pcb_white",
+            MFBlocksRegistry.PCB_WHITE);
+
+    public static final DeferredItem<BlockItem> PCB_BLACK = ITEM.registerSimpleBlockItem("pcb_black",
+            MFBlocksRegistry.PCB_BLACK);
+
+    public static final DeferredItem<BlockItem> PCB_GREEN = ITEM.registerSimpleBlockItem("pcb_green",
+            MFBlocksRegistry.PCB_GREEN);
+
+    public static final DeferredItem<BlockItem> PCB_RED = ITEM.registerSimpleBlockItem("pcb_red",
+            MFBlocksRegistry.PCB_RED);
+
+    public static final DeferredItem<BlockItem> PCB_BLUE = ITEM.registerSimpleBlockItem("pcb_blue",
+            MFBlocksRegistry.PCB_BLUE);
+
     public static void registerModItems() {
         MineFantasia.LOGGER.info("Registering Items for MineFantasia...");
     }

@@ -11,6 +11,21 @@ public class MFBlocksRegistry {
     public static final DeferredBlock<Block> PIANO = BLOCK.register("piano",
             MFPianoBlock::new);
 
+    public static final DeferredBlock<Block> PCB_WHITE = BLOCK.register("pcb_white",
+            MFPureColorBackgroundBlockWhite::new);
+
+    public static final DeferredBlock<Block> PCB_BLACK = BLOCK.register("pcb_black",
+            MFPureColorBackgroundBlockBlack::new);
+
+    public static final DeferredBlock<Block> PCB_GREEN = BLOCK.register("pcb_green",
+            MFPureColorBackgroundBlockGreen::new);
+
+    public static final DeferredBlock<Block> PCB_RED = BLOCK.register("pcb_red",
+            MFPureColorBackgroundBlockRed::new);
+
+    public static final DeferredBlock<Block> PCB_BLUE = BLOCK.register("pcb_blue",
+            MFPureColorBackgroundBlockBlue::new);
+
     public static void registerModBlocks() {
         MineFantasia.LOGGER.info("Registering Blocks for MineFantasia...");
     }

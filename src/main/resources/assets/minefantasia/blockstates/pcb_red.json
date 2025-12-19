@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minefantasia:block/pcb_red"
+      },
+      {
+        "model": "minefantasia:block/pcb_red",
+        "y": 90
+      },
+      {
+        "model": "minefantasia:block/pcb_red",
+        "y": 180
+      },
+      {
+        "model": "minefantasia:block/pcb_red",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -9,5 +9,10 @@
   "item.minefantasia.harp": "竖琴",
   "item.minefantasia.kalimba": "卡林巴琴",
 
-  "block.minefantasia.piano": "钢琴"
+  "block.minefantasia.piano": "钢琴",
+  "block.minefantasia.pcb_white": "白色纯色背景板",
+  "block.minefantasia.pcb_black": "黑色纯色背景板",
+  "block.minefantasia.pcb_green": "绿色纯色背景板",
+  "block.minefantasia.pcb_red": "红色纯色背景板",
+  "block.minefantasia.pcb_blue": "蓝色纯色背景板"
 }

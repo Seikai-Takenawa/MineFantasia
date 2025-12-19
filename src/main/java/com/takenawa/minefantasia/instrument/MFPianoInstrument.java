@@ -5,7 +5,7 @@ import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MFPianoInstrument implements MFInstruments {
+public final class MFPianoInstrument implements MFInstruments {
     private static final String INSTRUMENT_ID = "piano";
     private static final String BASIC_PROPERTY = "giant";
 

@@ -8,7 +8,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class MFPianoBlock extends MFInstrumentBlock {
+public final class MFPianoBlock extends MFInstrumentBlock {
     private static final VoxelShape SHAPE = Block.box(
             -12.0, 0.0, -10.0,
             28.0, 32.0, 26.0

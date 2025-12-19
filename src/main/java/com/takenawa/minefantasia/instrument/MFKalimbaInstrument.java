@@ -5,7 +5,7 @@ import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MFKalimbaInstrument implements MFInstruments {
+public final class MFKalimbaInstrument implements MFInstruments {
     private static final String INSTRUMENT_ID = "kalimba";
     private static final String BASIC_PROPERTY = "handhold";
 

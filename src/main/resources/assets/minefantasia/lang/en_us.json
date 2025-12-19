@@ -9,5 +9,10 @@
   "item.minefantasia.harp": "Harp",
   "item.minefantasia.kalimba": "Kalimba",
 
-  "block.minefantasia.piano": "piano"
+  "block.minefantasia.piano": "piano",
+  "block.minefantasia.pcb_white": "white background board",
+  "block.minefantasia.pcb_black": "black background board",
+  "block.minefantasia.pcb_green": "green background board",
+  "block.minefantasia.pcb_red": "red background board",
+  "block.minefantasia.pcb_blue": "blue background board"
 }

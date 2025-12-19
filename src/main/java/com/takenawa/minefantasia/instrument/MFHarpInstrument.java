@@ -5,7 +5,7 @@ import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MFHarpInstrument implements MFInstruments {
+public final class MFHarpInstrument implements MFInstruments {
     private static final String INSTRUMENT_ID = "harp";
     private static final String BASIC_PROPERTY = "handhold";
 

@@ -19,6 +19,11 @@ public class MFCreativeModTab {
                 output.accept(MFItemsRegistry.HARP.get());
                 output.accept(MFItemsRegistry.KALIMBA.get());
                 output.accept(MFItemsRegistry.PIANO.get());
+                output.accept(MFItemsRegistry.PCB_WHITE.get());
+                output.accept(MFItemsRegistry.PCB_BLACK.get());
+                output.accept(MFItemsRegistry.PCB_GREEN.get());
+                output.accept(MFItemsRegistry.PCB_RED.get());
+                output.accept(MFItemsRegistry.PCB_BLUE.get());
             }).build());
 
     public static void registerModCreativeModeTabs() {
