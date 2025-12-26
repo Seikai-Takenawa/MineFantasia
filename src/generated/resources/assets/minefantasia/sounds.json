@@ -431,6 +431,438 @@
     ],
     "subtitle": "key.minefantasia.kalimba/6sg"
   },
+  "middle_age_synth/2a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2a"
+  },
+  "middle_age_synth/2b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2b"
+  },
+  "middle_age_synth/2c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2c"
+  },
+  "middle_age_synth/2d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2d"
+  },
+  "middle_age_synth/2e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2e"
+  },
+  "middle_age_synth/2f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2f"
+  },
+  "middle_age_synth/2g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2g"
+  },
+  "middle_age_synth/2sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2sa"
+  },
+  "middle_age_synth/2sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2sc"
+  },
+  "middle_age_synth/2sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2sd"
+  },
+  "middle_age_synth/2sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2sf"
+  },
+  "middle_age_synth/2sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/2sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/2sg"
+  },
+  "middle_age_synth/3a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3a"
+  },
+  "middle_age_synth/3b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3b"
+  },
+  "middle_age_synth/3c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3c"
+  },
+  "middle_age_synth/3d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3d"
+  },
+  "middle_age_synth/3e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3e"
+  },
+  "middle_age_synth/3f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3f"
+  },
+  "middle_age_synth/3g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3g"
+  },
+  "middle_age_synth/3sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3sa"
+  },
+  "middle_age_synth/3sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3sc"
+  },
+  "middle_age_synth/3sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3sd"
+  },
+  "middle_age_synth/3sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3sf"
+  },
+  "middle_age_synth/3sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/3sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/3sg"
+  },
+  "middle_age_synth/4a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4a"
+  },
+  "middle_age_synth/4b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4b"
+  },
+  "middle_age_synth/4c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4c"
+  },
+  "middle_age_synth/4d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4d"
+  },
+  "middle_age_synth/4e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4e"
+  },
+  "middle_age_synth/4f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4f"
+  },
+  "middle_age_synth/4g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4g"
+  },
+  "middle_age_synth/4sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4sa"
+  },
+  "middle_age_synth/4sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4sc"
+  },
+  "middle_age_synth/4sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4sd"
+  },
+  "middle_age_synth/4sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4sf"
+  },
+  "middle_age_synth/4sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/4sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/4sg"
+  },
+  "middle_age_synth/5a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5a"
+  },
+  "middle_age_synth/5b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5b"
+  },
+  "middle_age_synth/5c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5c"
+  },
+  "middle_age_synth/5d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5d"
+  },
+  "middle_age_synth/5e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5e"
+  },
+  "middle_age_synth/5f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5f"
+  },
+  "middle_age_synth/5g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5g"
+  },
+  "middle_age_synth/5sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5sa"
+  },
+  "middle_age_synth/5sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5sc"
+  },
+  "middle_age_synth/5sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5sd"
+  },
+  "middle_age_synth/5sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5sf"
+  },
+  "middle_age_synth/5sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/5sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/5sg"
+  },
+  "middle_age_synth/6a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6a"
+  },
+  "middle_age_synth/6b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6b"
+  },
+  "middle_age_synth/6c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6c"
+  },
+  "middle_age_synth/6d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6d"
+  },
+  "middle_age_synth/6e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6e"
+  },
+  "middle_age_synth/6f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6f"
+  },
+  "middle_age_synth/6g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6g"
+  },
+  "middle_age_synth/6sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6sa"
+  },
+  "middle_age_synth/6sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6sc"
+  },
+  "middle_age_synth/6sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6sd"
+  },
+  "middle_age_synth/6sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6sf"
+  },
+  "middle_age_synth/6sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/6sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/6sg"
+  },
+  "middle_age_synth/7a": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7a"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7a"
+  },
+  "middle_age_synth/7b": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7b"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7b"
+  },
+  "middle_age_synth/7c": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7c"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7c"
+  },
+  "middle_age_synth/7d": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7d"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7d"
+  },
+  "middle_age_synth/7e": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7e"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7e"
+  },
+  "middle_age_synth/7f": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7f"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7f"
+  },
+  "middle_age_synth/7g": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7g"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7g"
+  },
+  "middle_age_synth/7sa": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7sa"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7sa"
+  },
+  "middle_age_synth/7sc": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7sc"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7sc"
+  },
+  "middle_age_synth/7sd": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7sd"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7sd"
+  },
+  "middle_age_synth/7sf": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7sf"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7sf"
+  },
+  "middle_age_synth/7sg": {
+    "sounds": [
+      "minefantasia:middle_age_synth/7sg"
+    ],
+    "subtitle": "key.minefantasia.middle_age_synth/7sg"
+  },
   "piano/3a": {
     "sounds": [
       "minefantasia:piano/3a"

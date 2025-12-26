@@ -6,17 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class MFKalimbaInstrument implements MFInstruments {
-    private static final String INSTRUMENT_ID = "kalimba";
-    private static final String BASIC_PROPERTY = "handhold";
+    private static final String instrumentId = "kalimba";
 
     @Override
     public String getInstrumentId() {
-        return INSTRUMENT_ID;
-    }
-
-    @Override
-    public String getBasicProperty() {
-        return BASIC_PROPERTY;
+        return instrumentId;
     }
 
     @Override
@@ -31,7 +25,7 @@ public final class MFKalimbaInstrument implements MFInstruments {
         for (int octave = getMinOctave(); octave <= getMaxOctave(); octave++) {
             for (String note : basicNoteNames()) {
                 String noteName = octave + note;
-                String recordPathName = INSTRUMENT_ID + "/" + noteName;
+                String recordPathName = instrumentId + "/" + noteName;
                 noteNames.add(recordPathName);
             }
         }
@@ -43,7 +37,7 @@ public final class MFKalimbaInstrument implements MFInstruments {
         for (int octave = getMinOctave(); octave <= getMaxOctave(); octave++) {
             for (String note : basicNoteNames()) {
                 String soundName = octave + note;
-                MFInstrumentNoteSoundsRegistry.registerInstrumentNoteSounds(INSTRUMENT_ID, soundName);
+                MFInstrumentNoteSoundsRegistry.registerInstrumentNoteSounds(instrumentId, soundName);
             }
         }
     }

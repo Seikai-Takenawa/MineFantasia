@@ -1,8 +1,5 @@
 package com.takenawa.minefantasia.mapping;
 
-import com.takenawa.minefantasia.MineFantasia;
-import net.minecraft.resources.ResourceLocation;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,23 +33,65 @@ public class MFKeyToNoteMapping {
         KEY_TO_NOTE_MAP.put(77, "4b");  // M
     }
 
-    public static String getNoteForKey(int keyCode, boolean isUpper) {
-        return KEY_TO_NOTE_MAP.get(keyCode);
-    }
-
     public static String getNoteForKey(int keyCode) {
-        return getNoteForKey(keyCode, false);
+        return KEY_TO_NOTE_MAP.get(keyCode);
     }
 
     public static boolean isPlayableKey(int keyCode) {
         return !Objects.equals(KEY_TO_NOTE_MAP.get(keyCode), "");
     }
 
-    public static ResourceLocation getSoundLocation(String instrumentId, String note) {
-        return ResourceLocation.fromNamespaceAndPath(MineFantasia.MODID, instrumentId + "/" + note);
-    }
-
     public static void changeNoteMapping(int keyCode, String note) {
         KEY_TO_NOTE_MAP.replace(keyCode, note);
+    }
+
+    public static void raiseOctave() {
+        Map<Integer, String> newMap = new HashMap<>();
+        for (Map.Entry<Integer, String> entry : KEY_TO_NOTE_MAP.entrySet()) {
+            String note = entry.getValue();
+            if (note != null && note.length() >= 2) {
+                try {
+                    int octave = Integer.parseInt(note.substring(0, 1));
+                    if (octave < 8) {
+                        octave++;
+                        String newNote = octave + note.substring(1);
+                        newMap.put(entry.getKey(), newNote);
+                    } else {
+                        newMap.put(entry.getKey(), note);
+                    }
+                } catch (NumberFormatException e) {
+                    newMap.put(entry.getKey(), note);
+                }
+            } else {
+                newMap.put(entry.getKey(), note);
+            }
+        }
+        KEY_TO_NOTE_MAP.clear();
+        KEY_TO_NOTE_MAP.putAll(newMap);
+    }
+
+    public static void lowerOctave() {
+        Map<Integer, String> newMap = new HashMap<>();
+        for (Map.Entry<Integer, String> entry : KEY_TO_NOTE_MAP.entrySet()) {
+            String note = entry.getValue();
+            if (note != null && note.length() >= 2) {
+                try {
+                    int octave = Integer.parseInt(note.substring(0, 1));
+                    if (octave > 1) {
+                        octave--;
+                        String newNote = octave + note.substring(1);
+                        newMap.put(entry.getKey(), newNote);
+                    } else {
+                        newMap.put(entry.getKey(), note);
+                    }
+                } catch (NumberFormatException e) {
+                    newMap.put(entry.getKey(), note);
+                }
+            } else {
+                newMap.put(entry.getKey(), note);
+            }
+        }
+        KEY_TO_NOTE_MAP.clear();
+        KEY_TO_NOTE_MAP.putAll(newMap);
     }
 }

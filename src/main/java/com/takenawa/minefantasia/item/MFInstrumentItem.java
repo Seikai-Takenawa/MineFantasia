@@ -27,5 +27,4 @@ public class MFInstrumentItem extends Item {
         }
         return InteractionResult.SUCCESS;
     }
-
 }

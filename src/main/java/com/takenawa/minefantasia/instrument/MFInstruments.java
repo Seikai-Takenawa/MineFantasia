@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface MFInstruments {
     String getInstrumentId();
-    String getBasicProperty();
     List<String> getNoteNames();
     List<String> allNoteNames();
     void registerNotes();

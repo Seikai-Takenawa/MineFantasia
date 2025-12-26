@@ -23,13 +23,16 @@ public class MFInstrumentPlayingScreen extends Screen {
     private EditBox noteInputBox;
     private int gridStartX, gridStartY;
     private int blockSize;
+    private int settingsButtonX, settingsButtonY;
+    private int eyeButtonX, eyeButtonY;
+    private int upButtonX, upButtonY;
+    private int downButtonX, downButtonY;
     private final int blockSpacing = 8;
     private final int rows = 3;
     private final int cols = 7;
-    private int settingsButtonX, settingsButtonY;
-    private int eyeButtonX, eyeButtonY;
     private final int settingsButtonSize = 20;
     private final int eyeButtonSize = 20;
+    private final int octaveButtonSize = 20;
     private final Map<Integer, Long> pressedKeys = new HashMap<>();
     private static final Map<Integer, Integer[]> KEY_MAPPING = new HashMap<>();
     private static final long KEY_PRESS_DURATION = 150;
@@ -68,6 +71,12 @@ public class MFInstrumentPlayingScreen extends Screen {
         eyeButtonX = settingsButtonX;
         eyeButtonY = settingsButtonY - eyeButtonSize - 10;
 
+        upButtonX = 10;
+        upButtonY = this.height - octaveButtonSize * 2 - 20;
+
+        downButtonX = 10;
+        downButtonY = this.height - octaveButtonSize - 10;
+
         noteInputBox = new EditBox(
                 this.font,
                 this.width / 2 - 60, this.height / 2 + 80,
@@ -102,6 +111,16 @@ public class MFInstrumentPlayingScreen extends Screen {
             if (isMouseOverEyeButton(event.x(), event.y())) {
                 this.onClose();
                 Minecraft.getInstance().setScreen(new MFInstrumentHidedPlayingScreen(Component.literal("")));
+                return true;
+            }
+
+            if (isMouseOverUpButton(event.x(), event.y())) {
+                MFKeyToNoteMapping.raiseOctave();
+                return true;
+            }
+
+            if (isMouseOverDownButton(event.x(), event.y())) {
+                MFKeyToNoteMapping.lowerOctave();
                 return true;
             }
 
@@ -319,6 +338,7 @@ public class MFInstrumentPlayingScreen extends Screen {
         this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         renderSettingsButton(guiGraphics, mouseX, mouseY);
         renderEyeButton(guiGraphics, mouseX, mouseY);
+        renderOctaveButtons(guiGraphics, mouseX, mouseY);
 
         if (selectedKeyCode != -1) {
             for (int row = 0; row < rows; row++) {
@@ -393,7 +413,7 @@ public class MFInstrumentPlayingScreen extends Screen {
         renderButtonBackground(guiGraphics, buttonColor, borderColor, settingsButtonX, settingsButtonY);
 
         String gearSymbol = "⚙";
-        int textX = settingsButtonX + settingsButtonSize / 2 - 4;
+        int textX = settingsButtonX + settingsButtonSize / 2 - 3;
         int textY = settingsButtonY + settingsButtonSize / 2 - 4;
         guiGraphics.drawString(this.font, gearSymbol, textX, textY, 0xFF000000, false);
     }
@@ -444,6 +464,27 @@ public class MFInstrumentPlayingScreen extends Screen {
         );
     }
 
+    private void renderOctaveButtons(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+        int upButtonColor = isMouseOverUpButton(mouseX, mouseY) ? 0x4AFFA500 : 0x4A808080;
+        int upBorderColor = isMouseOverUpButton(mouseX, mouseY) ? 0xFFFFFF00 : 0xFFFFFFFF;
+
+        renderButtonBackground(guiGraphics, upButtonColor, upBorderColor, upButtonX, upButtonY);
+
+        String upSymbol = "↑";
+        int upTextX = upButtonX + octaveButtonSize / 2 - 3;
+        int upTextY = upButtonY + octaveButtonSize / 2 - 4;
+        guiGraphics.drawString(this.font, upSymbol, upTextX, upTextY, 0xFF000000, false);
+
+        int downButtonColor = isMouseOverDownButton(mouseX, mouseY) ? 0x4AFFA500 : 0x4A808080;
+        int downBorderColor = isMouseOverDownButton(mouseX, mouseY) ? 0xFFFFFF00 : 0xFFFFFFFF;
+
+        renderButtonBackground(guiGraphics, downButtonColor, downBorderColor, downButtonX, downButtonY);
+
+        String downSymbol = "↓";
+        int downTextX = downButtonX + octaveButtonSize / 2 - 3;
+        int downTextY = downButtonY + octaveButtonSize / 2 - 4;
+        guiGraphics.drawString(this.font, downSymbol, downTextX, downTextY, 0xFF000000, false);
+    }
 
     private boolean isMouseOverSettingsButton(double mouseX, double mouseY) {
         return mouseX >= settingsButtonX && mouseX <= settingsButtonX + settingsButtonSize &&
@@ -453,6 +494,16 @@ public class MFInstrumentPlayingScreen extends Screen {
     private boolean isMouseOverEyeButton(double mouseX, double mouseY) {
         return mouseX >= eyeButtonX && mouseX <= eyeButtonX + eyeButtonSize &&
                 mouseY >= eyeButtonY && mouseY <= eyeButtonY + eyeButtonSize;
+    }
+
+    private boolean isMouseOverUpButton(double mouseX, double mouseY) {
+        return mouseX >= upButtonX && mouseX <= upButtonX + octaveButtonSize &&
+                mouseY >= upButtonY && mouseY <= upButtonY + octaveButtonSize;
+    }
+
+    private boolean isMouseOverDownButton(double mouseX, double mouseY) {
+        return mouseX >= downButtonX && mouseX <= downButtonX + octaveButtonSize &&
+                mouseY >= downButtonY && mouseY <= downButtonY + octaveButtonSize;
     }
 
     private boolean isMouseOverBlock(double mouseX, double mouseY, int row, int col) {

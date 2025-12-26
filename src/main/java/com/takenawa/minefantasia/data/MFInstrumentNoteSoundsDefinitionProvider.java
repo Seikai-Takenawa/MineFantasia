@@ -1,10 +1,7 @@
 package com.takenawa.minefantasia.data;
 
 import com.takenawa.minefantasia.MineFantasia;
-import com.takenawa.minefantasia.instrument.MFHarpInstrument;
-import com.takenawa.minefantasia.instrument.MFInstruments;
-import com.takenawa.minefantasia.instrument.MFKalimbaInstrument;
-import com.takenawa.minefantasia.instrument.MFPianoInstrument;
+import com.takenawa.minefantasia.instrument.*;
 import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +19,7 @@ public class MFInstrumentNoteSoundsDefinitionProvider extends SoundDefinitionsPr
         registerInstrumentNoteSounds(new MFHarpInstrument());
         registerInstrumentNoteSounds(new MFKalimbaInstrument());
         registerInstrumentNoteSounds(new MFPianoInstrument());
+        registerInstrumentNoteSounds(new MFMiddleAgeSynthInstrument());
     }
 
     private void registerInstrumentNoteSounds(MFInstruments instrument) {
@@ -36,8 +34,8 @@ public class MFInstrumentNoteSoundsDefinitionProvider extends SoundDefinitionsPr
                             .subtitle("key.minefantasia." + noteRegisterName)
             );
 
-            MineFantasia.LOGGER.info("Registered sound definition: {}", noteRegisterName);
+            MineFantasia.LOGGER.debug("Registered sound definition: {}", noteRegisterName);
         }
-        MineFantasia.LOGGER.info("Registered {} {} sound definitions", noteRegisterNames.size(), instrument.getInstrumentId());
+        MineFantasia.LOGGER.debug("Registered {} {} sound definitions", noteRegisterNames.size(), instrument.getInstrumentId());
     }
 }

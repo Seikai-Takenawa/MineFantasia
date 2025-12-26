@@ -2,6 +2,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.gradle.userdev' version '7.1.9'
+    id 'com.gradleup.shadow' version '9.3.0'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -17,7 +18,17 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'GeckoLib'
+                url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+            }
+        }
+        filter {
+                includeGroup('software.bernie.geckolib')
+        }
+    }
 }
 
 base {
@@ -95,6 +106,8 @@ dependencies {
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    shadow "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -133,7 +146,8 @@ tasks.withType(ProcessResources).configureEach {
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_description        : mod_description,
+            geckolib_version       : geckolib_version
     ]
     inputs.properties replaceProperties
 
@@ -166,4 +180,16 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+shadowJar {
+    relocate 'software.bernie.geckolib', 'com.takenawa.minefantasia.geckolib5'
+
+    archiveClassifier = 'shadow'
+
+    configurations = [project.configurations.shadow]
+}
+
+tasks.named('jar', Jar).configure {
+    finalizedBy 'shadowJar'
 }

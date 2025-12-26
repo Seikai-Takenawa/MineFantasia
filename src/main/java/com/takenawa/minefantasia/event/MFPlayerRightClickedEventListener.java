@@ -2,9 +2,11 @@ package com.takenawa.minefantasia.event;
 
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.block.MFBlocksRegistry;
+import com.takenawa.minefantasia.geo.entity.instrument.MFSynthInstrumentEntity;
 import com.takenawa.minefantasia.handler.MFInstrumentClientHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -38,6 +40,15 @@ public class MFPlayerRightClickedEventListener {
             level.setBlock(pos, MFBlocksRegistry.PCB_BLUE.get().defaultBlockState(), 3);
         }else if (state.is(MFBlocksRegistry.PCB_BLUE.get()) && itemInHand.isEmpty()) {
             level.setBlock(pos, MFBlocksRegistry.PCB_WHITE.get().defaultBlockState(), 3);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+        Entity target = event.getTarget();
+        if (target instanceof MFSynthInstrumentEntity synth) {
+            MFInstrumentClientHandler.startPlayingSustainable(synth.getInstrumentId(), synth.getFadeDuration());
+            MFInstrumentClientHandler.setIsPlayingSustainIns(true);
         }
     }
 }

@@ -4,7 +4,7 @@ import com.mojang.blaze3d.platform.Window;
 import com.takenawa.minefantasia.MineFantasia;
 import com.takenawa.minefantasia.item.MFInstrumentItem;
 import com.takenawa.minefantasia.screen.MFInstrumentPlayingScreen;
-import net.minecraft.client.CameraType;
+import com.takenawa.minefantasia.screen.MFSustainableInstrumentPlayingScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
@@ -21,8 +21,8 @@ import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
 public class MFInstrumentClientHandler {
     private static boolean isPlaying = false;
     private static boolean isPlayingPiano = false;
+    private static boolean isPlayingSustainIns = false;
     private static String currentInstrumentId = null;
-    private static CameraType previousCameraType = null;
 
     public static String getCurrentInstrumentId() {
         return currentInstrumentId;
@@ -40,9 +40,6 @@ public class MFInstrumentClientHandler {
 
         isPlaying = true;
         currentInstrumentId = instrumentId;
-        previousCameraType = mc.options.getCameraType();
-
-        mc.options.setCameraType(CameraType.THIRD_PERSON_BACK);
         clearAllSounds();
 
         mc.options.hideGui = true;
@@ -51,6 +48,28 @@ public class MFInstrumentClientHandler {
         window.setAllowCursorChanges(false);
 
         Minecraft.getInstance().setScreen(new MFInstrumentPlayingScreen(Component.literal("")));
+    }
+
+    public static void startPlayingSustainable(String instrumentId, int fadeDuration) {
+        if (isPlaying) {
+            return;
+        }
+
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null) {
+            return;
+        }
+
+        isPlaying = true;
+        currentInstrumentId = instrumentId;
+        clearAllSounds();
+
+        mc.options.hideGui = true;
+
+        Window window = mc.getWindow();
+        window.setAllowCursorChanges(false);
+
+        Minecraft.getInstance().setScreen(new MFSustainableInstrumentPlayingScreen(Component.literal(""), fadeDuration));
     }
 
     public static void stopPlaying() {
@@ -65,12 +84,10 @@ public class MFInstrumentClientHandler {
 
         isPlaying = false;
         currentInstrumentId = null;
+        isPlayingPiano = false;
+        isPlayingSustainIns = false;
 
-        if (previousCameraType != null) {
-            mc.options.setCameraType(CameraType.FIRST_PERSON);
-        }
         resumeBackgroundMusic();
-
         mc.options.hideGui = false;
 
         Window window = mc.getWindow();
@@ -94,7 +111,7 @@ public class MFInstrumentClientHandler {
 
         if (isPlaying) {
             ItemStack mainHandItem = player.getMainHandItem();
-            if (!(mainHandItem.getItem() instanceof MFInstrumentItem) && !isPlayingPiano) {
+            if (!(mainHandItem.getItem() instanceof MFInstrumentItem) && !isPlayingPiano && !isPlayingSustainIns) {
                 stopPlaying();
             }
         }
@@ -134,6 +151,10 @@ public class MFInstrumentClientHandler {
     }
 
     public static void setIsPlayingPiano(boolean bool) {
-        MFInstrumentClientHandler.isPlayingPiano = bool;
+        isPlayingPiano = bool;
+    }
+
+    public static void setIsPlayingSustainIns(boolean bool) {
+        isPlayingSustainIns = bool;
     }
 }

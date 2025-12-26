@@ -1,6 +1,7 @@
 package com.takenawa.minefantasia;
 
 import com.takenawa.minefantasia.block.MFBlocksRegistry;
+import com.takenawa.minefantasia.geo.entity.MFGeoEntitiesRegistry;
 import com.takenawa.minefantasia.item.MFItemsRegistry;
 import com.takenawa.minefantasia.network.MFNetworkHandler;
 import com.takenawa.minefantasia.sound.MFInstrumentNoteSoundsRegistry;
@@ -8,6 +9,7 @@ import com.takenawa.minefantasia.tab.MFCreativeModTab;
 import com.takenawa.minefantasia.worldgen.structure.MFStructurePieceTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
 import org.slf4j.Logger;
 
@@ -25,6 +27,7 @@ public class MineFantasia {
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, MODID);
     public static final DeferredRegister<SoundEvent>  SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredRegister<StructurePieceType> STRUCTURE_PIECE_TYPES = DeferredRegister.create(Registries.STRUCTURE_PIECE, MineFantasia.MODID);
@@ -34,6 +37,8 @@ public class MineFantasia {
         BLOCKS.register(modEventBus);
         MFItemsRegistry.registerModItems();
         ITEMS.register(modEventBus);
+        MFGeoEntitiesRegistry.registerModEntityTypes();
+        ENTITY_TYPES.register(modEventBus);
         MFInstrumentNoteSoundsRegistry.registerModSounds();
         SOUNDS.register(modEventBus);
         MFCreativeModTab.registerModCreativeModeTabs();
