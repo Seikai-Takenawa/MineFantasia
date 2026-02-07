@@ -39,7 +39,7 @@ Its file structure is:<br>
 ├──📁`animation`<br>
 │ ├──📄`player.animation.json`<br>
 ├──📁`texture`<br>
-│ └──📄`player.png`<br>
+│ └──🖼️`player.png`<br>
 └──📄`uuid.json`<br>
 
 </details>
@@ -127,3 +127,4 @@ A5.Due to limited personal development capacity, there are currently no plans to
 Q6.Can I access the source code to add new custom features to the mod?<br>
 
 A6.The mod is not open-source at this time. Thank you for your understanding! If you are interested in porting the mod to other mod loaders, please email `morinoyoake@qq.com`.<br>
+
