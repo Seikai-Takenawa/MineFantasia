@@ -1,9 +1,9 @@
 我的音乐幻想|MineFantasia
 =======
 ![MineFantasia](src/main/resources/icon.png)
-<div style="text-align: center;">
+<p align="center">
   <strong>Language</strong>: <a href="README-en.md">English</a> | <a href="README.md">简体中文</a>
-</div>
+</p>
 
 Introduction
 =======
@@ -125,4 +125,5 @@ Q5.Will there be a version of the mod for Forge/Fabric in the future?<br>
 A5.Due to limited personal development capacity, there are currently no plans to develop a Forge/Fabric version.<br>
 
 Q6.Can I access the source code to add new custom features to the mod?<br>
+
 A6.The mod is not open-source at this time. Thank you for your understanding! If you are interested in porting the mod to other mod loaders, please email `morinoyoake@qq.com`.<br>
