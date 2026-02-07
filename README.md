@@ -2,10 +2,8 @@
 我的音乐幻想|MineFantasia
 =======
 ![MineFantasia](src/main/resources/icon.png)
-<p align="center>
-
-**语言**: [English](README-en.md) | [简体中文](README.md)
-
+<p align="center">
+  <strong>语言</strong>: <a href="README-en.md">English</a> | <a href="README.md">简体中文</a>
 </p>
 
 介绍
@@ -119,4 +117,5 @@ A5.个人开发精力有限，暂没有Forge/Fabric端的开发计划。
 
 Q6.我能获取源码向模组中添加新的自定义功能吗？<br>
 A6.模组暂不开源，感谢谅解！如果你有将模组移植到其它mod加载器的想法，请发送邮件到`morinoyoake@qq.com`。
+
 
