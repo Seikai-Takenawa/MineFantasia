@@ -2,9 +2,9 @@
 我的音乐幻想|MineFantasia
 =======
 ![MineFantasia](src/main/resources/icon.png)
-<div style="text-align: center;">
+<p align="center">
   <strong>语言</strong>: <a href="README-en.md">English</a> | <a href="README.md">简体中文</a>
-</div>
+</p>
 
 
 介绍
