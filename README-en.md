@@ -57,7 +57,7 @@ The `Octave Number` follows the numbering used in the FL Studio piano roll. Note
 
 The mod categorizes notes into single-tone notes and sustained notes. Currently, single-tone instruments include: Piano, Kalimba, and Harp. Sustained-tone instruments include: all Synthesizers, Violin, and Flute.
 
-The playing mechanism for single-tone instruments is as follows: when a corresponding note is clicked, the corresponding sound is played once. If a note is long-pressed in the performance screen, the corresponding note will be played repeatedly at a fast rate. Additionally, if you replace the piano sound source using a resource pack, please ensure that the length of each piano sound does not exceed the length of the original sound source. Otherwise, it may lead to disastrous consequences!
+The playing mechanism for single-tone instruments is as follows: when a corresponding note is clicked, the corresponding sound is played once. If a note is long-pressed in the performance screen, the corresponding note will be played repeatedly at a fast rate. **Therefore, when you decide to replace the sound source resource pack for any single-tone instrument, please ensure that the individual sound does not last too long. (1–2 seconds is recommended, excluding reverb tail effects.) Otherwise, it may lead to disastrous consequences!**
 
 For sustained-tone instruments: the maximum duration for which a single note can be played is determined by the length of the sound source file. In the mod's default version, all sustained-tone instruments can sustain a note for up to 8 seconds (equivalent to the length of 4 bars at 120 BPM in FL Studio).
 
@@ -238,6 +238,12 @@ The MIDI playbox accepts redstone pulse signals. Upon receiving a pulse signal, 
 In multiplayer mode, a single MIDI playbox shares a single entity across the entire server. To prevent conflicts between different clients, the MIDI playbox implements player binding. Upon initial placement, the player who first opens the playback screen will be automatically bound to the MIDI playbox.
 Until this player actively releases the binding or the block is broken and replaced, other players on the server cannot open the playback screen by right-clicking, though they can still control the MIDI playbox's playback state via redstone.
 
+Custom Sound Source Resource Pack
+=======
+If you are not satisfied with the default sound source of a particular instrument in the mod, and you have the means and ability to obtain an alternative sound source — for example, by sampling the instrument yourself — you can replace the relevant sound source files in the corresponding resource pack on your own.
+
+The mod uses the Ogg format for sound sources. The requirements for Ogg files (such as note duration, note naming conventions, etc.) have already been detailed in the [Note Configuration](#NoteConfiguration) section above and will not be repeated here.
+
 Installation
 =======
 The mod provides two installation versions: Full Version and Lite Version.
@@ -251,7 +257,7 @@ Neither the Full Version nor the Lite Version will affect multiplayer functional
 1.Please go to GeckoLib's [GitHub repository](https://github.com/bernie-g/geckolib), [modrinth page](https://modrinth.com/mod/geckolib), or other sources to download the corresponding version of GeckoLib-NeoForge. Then, place the downloaded JAR file into your `mods` folder.<br>
 2.Please download the latest version of this mod from the `Releases` section on the right or from Modrinth, and place the downloaded JAR file into your `mods` folder.<br>
 
-Due to some sound sources not yet having clear authorization, the full version of the mod will not be provided at this time. The Lite version will only include resource packs for sound sources that have been properly authorized.
+**Due to some sound sources not yet having clear authorization, the full version of the mod will not be provided at this time. The Lite version will only include resource packs for sound sources that have been properly authorized.The resource pack for unauthorized sound sources contains only the basic file structure and does not include any .ogg files.**
 
 Copyright Notice
 =======
