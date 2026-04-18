@@ -251,6 +251,8 @@ MIDI音乐盒接收红石脉冲信号，在接收到一次脉冲信号后，会�
 1.请前往GeckoLib的[GitHub仓库](https://github.com/bernie-g/geckolib)、[modrinth](https://modrinth.com/mod/geckolib)等位置下载GeckoLib-NeoForge对应版本，并将下载的jar包放入你的'mods'文件夹下。<br>
 2.请于右侧的release或modrinth等位置下载所需的本模组的最新版本，并将下载的jar包放入你的'mods'文件夹下。<br>
 
+由于部分音源还未明确授权，所以暂不提供模组的完整版本；轻量版也将仅提供已授权音源的资源包。
+
 版权声明
 =======
 本模组（我的音乐幻想|MineFantasia）版权所有 © 2026 Seikai-Takenawa。保留所有权利（All Rights Reserved）。
