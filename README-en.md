@@ -251,6 +251,8 @@ Neither the Full Version nor the Lite Version will affect multiplayer functional
 1.Please go to GeckoLib's [GitHub repository](https://github.com/bernie-g/geckolib), [modrinth page](https://modrinth.com/mod/geckolib), or other sources to download the corresponding version of GeckoLib-NeoForge. Then, place the downloaded JAR file into your `mods` folder.<br>
 2.Please download the latest version of this mod from the `Releases` section on the right or from Modrinth, and place the downloaded JAR file into your `mods` folder.<br>
 
+Due to some sound sources not yet having clear authorization, the full version of the mod will not be provided at this time. The Lite version will only include resource packs for sound sources that have been properly authorized.
+
 Copyright Notice
 =======
 Copyright © 2026 Seikai-Takenawa for the mod (MineFantasia). All Rights Reserved.
