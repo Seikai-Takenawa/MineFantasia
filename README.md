@@ -334,7 +334,7 @@ MIDI音乐盒接收红石脉冲信号，在接收到一次脉冲信号后，会�
 模组自`0.0.9-beta`版本正式开始，所有的乐器声音均替换为来自CC0协议的原声乐器音源包或采用MIT许可证的FluidR3_GM的乐器采样，并正式提供完整版模组下载。
 
 1.请前往GeckoLib的[GitHub仓库](https://github.com/bernie-g/geckolib)、[Modrinth](https://modrinth.com/mod/geckolib)等位置下载GeckoLib-NeoForge对应版本，并将下载的jar包放入你的'mods'文件夹下。<br>
-2.请于右侧的Release或Modrinth等位置下载所需的本模组的最新版本，并将下载的jar包放入你的`mods`文件夹下。<br>
+2.请于右侧的Release或[Modrinth](https://modrinth.com/mod/minefantasia)等位置下载所需的本模组的最新版本，并将下载的jar包放入你的`mods`文件夹下。<br>
 
 版权声明
 =======
