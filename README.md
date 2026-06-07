@@ -335,6 +335,7 @@ MIDI音乐盒接收红石脉冲信号，在接收到一次脉冲信号后，会�
 
 1.请前往GeckoLib的[GitHub仓库](https://github.com/bernie-g/geckolib)、[Modrinth](https://modrinth.com/mod/geckolib)等位置下载GeckoLib-NeoForge对应版本，并将下载的jar包放入你的'mods'文件夹下。<br>
 2.请于右侧的Release或[Modrinth](https://modrinth.com/mod/minefantasia)等位置下载所需的本模组的最新版本，并将下载的jar包放入你的`mods`文件夹下。<br>
+3.如果你下载的是lite版本，可前往[Modrinth](https://modrinth.com/resourcepack/minefantasia-resources)下载相关资源包。<br>
 
 版权声明
 =======
