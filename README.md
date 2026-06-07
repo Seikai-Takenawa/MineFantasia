@@ -59,19 +59,12 @@
 
 模组将音符分为单音和可持续音。目前，单音乐器有：钢琴、卡林巴琴、竖琴；可持续音乐器有：所有的合成器、小提琴、笛子。
 
-单音乐器的演奏原理为：点击对应音符时，播放对应的声音一次。如果在演奏界面长按一个音，将快速重复播放对应音符。所以，当你决定替换任何一个单音乐器的音源资源包时，请确保单个声音不会持续太长时间（建议1-2秒，不包括混响延长效果）。否则会造成灾难性的后果！
+单音乐器的演奏原理为：点击对应音符时，播放对应的声音一次。如果在演奏界面长按一个音，将快速重复播放对应音符。此外，如果使用资源包置换了钢琴音源，请确保单个钢琴声音长度不要超过原来音源的长度。否则会造成灾难性的后果！
 
 对于可持续音乐器：单个音符最多可演奏时长由音源文件长度决定。模组原版的可持续音均可持续最长8秒钟（FL Studio中以120BPM行进4个小节的长度）。
 
-文件系统和自定义玩家模型
+文件系统
 =======
-为了让模组的乐器演奏系统更加生动，也为了适配乐器演奏动画，模组添加了基于GeckoLib5的动画系统，并基于最新的GeckoLib5，替换了原版Minecraft中所有视角的玩家模型。在你演奏乐器的过程中，模型也会做出对应的演奏动作。
-
-模组也重新设计了一套第一人称视角下相机的跟随系统。虽然这套系统在快速左右视角移动和极个别状态下的表现还有待加强，但在大多数情况下这套系统能够实现真正的玩家第一视角并保持良好的运作效果。
-
-模型支持替换，但ysm模型或其它模组的模型在此模组中<strong>_不受支持_</strong>。你应该使用GeckoLib模型。
-
-## 文件系统相关
 
 在你初次运行模组并进入世界后，模组会在你的`mods`文件夹下生成模组的专属文件夹。
 
@@ -81,24 +74,100 @@
  点击展开
 </summary>
 
-📁`minefantasia`<br>
-├──📁`midi`<br>
-├──📁`model`<br>
-│ └──📄`player.geo.json`<br>
-├──📁`animation`<br>
-│ └──📄`player.animation.json`<br>
-├──📁`texture`<br>
-│ └──🖼️`player.png`<br>
-└──📄`uuid.json`<br>
+```
+📁`minefantasia`
+├── 📁`midi`
+├── 📁`ins`
+│   └── 📁`custom_synth`
+│       └── 📄`example.json`
+├── 📁`model`
+│   └── 📄`player.geo.json`
+├── 📁`animation`
+│   └── 📄`player.animation.json`
+├── 📁`texture`
+│   └── 🖼️`player.png`
+└── 📄`uuid.json`
+```
 
 </details>
 
-其中，`midi`文件夹存放你所有的midi文件（与模型替换无关），`model`文件夹存放你所有的GeckoLib模型文件`key.geo.json`，`animation`文件夹存放你所有的GeckoLib模型动画文件`key.animation.json`，
+其中，`midi`文件夹存放你所有的midi文件（与模型替换无关），`ins`文件夹存放所有通用乐器的子乐器信息json文件，`model`文件夹存放你所有的GeckoLib模型文件`key.geo.json`，`animation`文件夹存放你所有的GeckoLib模型动画文件`key.animation.json`，
 `texture`文件夹存放你所有的GeckoLib模型贴图`key.png`。
 
-除`midi`文件夹外，每个目录都将生成一个以`player`为`key`的默认JSON文件，你不应该移除或替换它们。
+除`midi`和`ins`文件夹外，每个目录都将生成一个以`player`为`key`的默认JSON文件，你不应该移除或替换它们。
 
-## 自定义玩家模型相关
+自定义通用乐器
+=======
+自`0.0.9-beta`版本开始，模组将陆续加入各个乐器的`通用乐器`版本。
+
+`通用乐器`允许玩家自行添加不同音色的同种类乐器。其演奏界面与模组内置乐器基本一致，仅在演奏区上方新增子乐器切换模块。
+
+通用乐器采用`模组读取基本信息并完成注册+玩家自行导入音源资源包`的运行模式。与注册相关的信息均放在模组文件夹：`mods/minefantasia/ins`下，并在此文件夹下细分各个通用乐器。
+
+其文件结构为：
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ 点击展开
+</summary>
+
+```
+📁`minefantasia`
+└── 📁`ins`
+    ├── 📁`通用乐器1`
+    │   ├── 📄`子乐器1.json`
+    │   ├── 📄`子乐器2.json`
+    │   └── ...
+    ├── 📁`通用乐器2`
+    │   ├── 📄`子乐器1.json`
+    │   ├── 📄`子乐器2.json`
+    │   └── ...
+    └── ...
+```
+
+</details>
+
+子乐器的json文件的命名需与模组现有乐器不重复。以通用合成器为例，设有子乐器`sunshine`，则其子乐器的json文件名为`sunshine.json`并放入`ins/custom_synth`文件夹下。
+
+所包含的信息有：
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ 点击展开
+</summary>
+
+```
+📄`uuid.json`<br>
+├── 🗝️`name`字段：子乐器的乐器名，用于游戏内部识别。
+├── 🗝️`minOctave`字段：子乐器的最低八度，应大于0。
+├── 🗝️`maxOctave`字段：子乐器的最高八度，应小于10。
+└── 🗝️`fadeDuration`字段: 仅对可持续乐器有效，定义可持续乐器在停止按键后到声音彻底消失的时间。
+
+```
+
+</details>
+
+目前已添加的通用乐器如下：
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ 点击展开
+</summary>
+
+🎵-通用合成器
+
+</details>
+
+未来还将适配更多的通用乐器。
+
+为了便于玩家添加通用乐器资源，模组工具MFPackager已于GitHub上线。此工具可自动打包指定路径下的资源为模组可识别的资源包，并对通用乐器自动生成子乐器的注册json文件。
+
+自定义玩家模型
+=======
+为了让模组的乐器演奏系统更加生动，也为了适配乐器演奏动画，模组添加了基于GeckoLib5的动画系统，并基于最新的GeckoLib5，替换了原版Minecraft中所有视角的玩家模型。在你演奏乐器的过程中，模型也会做出对应的演奏动作。
+
+模组也重新设计了一套第一人称视角下相机的跟随系统。虽然这套系统在快速左右视角移动和极个别状态下的表现还有待加强，但在大多数情况下这套系统能够实现真正的玩家第一视角并保持良好的运作效果。
+
+模型支持替换，但ysm模型或其它模组的模型在此模组中<strong>_不受支持_</strong>。你应该使用GeckoLib模型。
+
+模组文件夹下的`model`、`animation`、`texture`及`uuid.json`与自定义玩家模型相关。
 
 `uuid.json`文件是一个以玩家uuid命名的文件，只在玩家进入世界时生成，其内容含有四个关键记录字段：<br>
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
@@ -155,11 +224,19 @@
 ├── 🎬`key.harp`：玩家模型在使用竖琴进行演奏时播放的整体动画，如姿势改变。<br>
 ├── 🎬`key.violin`：玩家模型在使用小提琴进行演奏时播放的整体动画，如姿势改变。<br>
 ├── 🎬`key.synth`：玩家模型在使用所有种类的合成器演奏时播放的整体动画，如姿势改变。<br>
+├── 🎬`key.banjo`：玩家模型在使用班卓琴进行演奏时播放的整体动画，如姿势改变。<br>
+├── 🎬`key.drumKit`：玩家模型在使用鼓组进行演奏时播放的整体动画，如姿势改变。<br>
+├── 🎬`key.bass`：玩家模型在使用贝斯进行演奏时播放的整体动画，如姿势改变。<br>
+├── 🎬`key.guitar`：玩家模型在使用吉他进行演奏时播放的整体动画，如姿势改变。<br>
 ├── 🎬`key.pianoPlay`：玩家模型在使用钢琴演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
 ├── 🎬`key.kalimbaPlay`：玩家模型在使用卡林巴琴演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
 ├── 🎬`key.harpPlay`：玩家模型在使用竖琴演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
 ├── 🎬`key.violinPlay`：玩家模型在使用小提琴演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
 ├── 🎬`key.synthPlay`：玩家模型在使用合成器演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
+├── 🎬`key.banjoPlay`：玩家模型在使用班卓琴演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
+├── 🎬`key.drumKitPlay`：玩家模型在使用鼓组演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
+├── 🎬`key.bassPlay`：玩家模型在使用贝斯演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
+├── 🎬`key.guitarPlay`：玩家模型在使用吉他演奏并进入演奏界面，按下音符时触发的瞬时动画，如手部动作。<br>
 └──
 
 </details>
@@ -254,10 +331,10 @@ MIDI音乐盒接收红石脉冲信号，在接收到一次脉冲信号后，会�
 
 无论是完整版还是轻量版，均不会影响多人联机功能。
 
-1.请前往GeckoLib的[GitHub仓库](https://github.com/bernie-g/geckolib)、[modrinth](https://modrinth.com/mod/geckolib)等位置下载GeckoLib-NeoForge对应版本，并将下载的jar包放入你的'mods'文件夹下。<br>
-2.请于右侧的release或modrinth等位置下载所需的本模组的最新版本，并将下载的jar包放入你的'mods'文件夹下。<br>
+模组自`0.0.9-beta`版本正式开始，所有的乐器声音均替换为来自CC0协议的原声乐器音源包或采用MIT许可证的FluidR3_GM的乐器采样，并正式提供完整版模组下载。
 
-**由于部分音源还未明确授权，所以暂不提供模组的完整版本；轻量版也将仅提供已授权音源的资源包。未授权音源的资源包仅包含基本文件结构，不包含任何ogg文件。**
+1.请前往GeckoLib的[GitHub仓库](https://github.com/bernie-g/geckolib)、[Modrinth](https://modrinth.com/mod/geckolib)等位置下载GeckoLib-NeoForge对应版本，并将下载的jar包放入你的'mods'文件夹下。<br>
+2.请于右侧的Release或Modrinth等位置下载所需的本模组的最新版本，并将下载的jar包放入你的`mods`文件夹下。<br>
 
 版权声明
 =======
@@ -302,4 +379,4 @@ Q7.较低版本会适配吗？将来会有Forge/Fabric端的模组吗？<br>
 A7.个人开发精力有限，暂没有Forge/Fabric端的开发计划。模组使用GeckoLib5，所以最低支持版本为1.21.5。
 
 Q8.我能够获取源码向模组中添加自定义的乐器和功能吗？<br>
-A8.模组暂不开源，敬请谅解！但是你可以通过下载轻量版模组，再置换指定乐器的资源包中的音源来实现类似功能。
+A8.模组暂不开源，敬请谅解！但是你可以通过下载轻量版模组，再置换指定乐器的资源包中的音源来实现类似功能。模组未来也会添加各个乐器的通用乐器版本。
