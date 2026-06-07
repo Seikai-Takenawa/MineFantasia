@@ -111,13 +111,13 @@ Their file structure is:
 ```
 📁`minefantasia`
 └── 📁`ins`
-    ├── 📁`通用乐器1`
-    │   ├── 📄`子乐器1.json`
-    │   ├── 📄`子乐器2.json`
+    ├── 📁`General Instrument 1`
+    │   ├── 📄`Sub Instrument 1.json`
+    │   ├── 📄`Sub Instrument 2.json`
     │   └── ...
-    ├── 📁`通用乐器2`
-    │   ├── 📄`子乐器1.json`
-    │   ├── 📄`子乐器2.json`
+    ├── 📁`General Instrument 2`
+    │   ├── 📄`Sub Instrument 1.json`
+    │   ├── 📄`Sub Instrument 2.json`
     │   └── ...
     └── ...
 
