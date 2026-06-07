@@ -134,12 +134,14 @@ The information contained is as follows:
  Click to expand
 </summary>
 
+```
 📄`uuid.json`<br>
 ├── 🗝️`name` field: The name of the child instrument, used for internal game identification.
 ├── 🗝️`minOctave` field: The lowest octave of the child instrument, should be greater than 0.
 ├── 🗝️`maxOctave` field: The highest octave of the child instrument, should be less than 10.
 └── 🗝️`fadeDuration` field: Only valid for sustained instruments, defines the time from when a key is released until the sound completely fades out.
 
+```
 </details>
 
 General instruments currently added are as follows:
