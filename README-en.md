@@ -261,13 +261,13 @@ All MIDI files are stored in the `mods/minefantasia/midi` folder:<br>
 
 The suffix for MIDI files must be `.mid`. The mod supports single-track and multi-track simultaneous playback for `format0` and `format1` MIDI files, and single-track playback for `format2` MIDI files.
 
-## MIDI Jukebox and its Interface
+## MIDI Playbox and its Interface
 
-In the mod, MIDI file playback is achieved through the mod's block entity: the MIDI Jukebox. Its interface is shown below:
+In the mod, MIDI file playback is achieved through the mod's block entity: the MIDI Playbox. Its interface is shown below:
 
-![MIDI Jukebox Interface](example.midi.screen.png)
+![MIDI Playbox Interface](example.midi.screen.png)
 
-The MIDI Jukebox interface has three selection sections, from left to right:
+The MIDI Playbox interface has three selection sections, from left to right:
 
 ### Instruments
 
@@ -283,7 +283,7 @@ After you select a MIDI file, this section reads the selected MIDI file and disp
 
 Below each section, there are page-turning buttons indicated by left and right arrows. The default number of information entries displayed per section is 5.
 
-Additionally, the MIDI Jukebox interface has three buttons, from left to right:
+Additionally, the MIDI Playbox interface has three buttons, from left to right:
 
 ### Confirm
 This button is specifically used for setting information before redstone signal triggering, such as setting the performance instrument and performance tracks. If clicked while not playing, it will not play the selected tracks. To play, you can use a redstone signal trigger. If clicked while playing, the system will check if options like the instrument selection have changed. If they have, it will stop playback and immediately start playing with the new configuration.
@@ -291,10 +291,10 @@ This button is specifically used for setting information before redstone signal 
 ### Play
 This button is used to immediately play the selected tracks after selecting the performance instrument and tracks.
 
-Please note: If you click Play without selecting any instrument or track, the MIDI Jukebox will set the relevant information to empty.
+Please note: If you click Play without selecting any instrument or track, the MIDI Playbox will set the relevant information to empty.
 
 ### Stop
-This button is used to immediately stop the current MIDI Jukebox playback and clear previous playback information such as the performance instrument and tracks. If you do not click this button, the information will not be lost after the MIDI sequence finishes playing normally. After clicking this button, you need to reconfigure the MIDI Jukebox.
+This button is used to immediately stop the current MIDI Playbox playback and clear previous playback information such as the performance instrument and tracks. If you do not click this button, the information will not be lost after the MIDI sequence finishes playing normally. After clicking this button, you need to reconfigure the MIDI Playbox.
 
 There are also two buttons in the upper-left corner of the interface, from top to bottom:
 
@@ -302,15 +302,15 @@ There are also two buttons in the upper-left corner of the interface, from top t
 When this button is activated, it turns green and will play the currently playing MIDI file to all players on the server. This sync function is independent on each client. This means that even if other players do not have the MIDI file you are playing, they can still hear the music. This button can be adjusted at any time during playback.
 
 ### Release Control Button
-This button is red by default, indicating that the current Jukebox entity is occupied by you. Clicking this button releases your ownership of the Jukebox entity, the playback interface will close, and other players can then right-click to open the interface and use the Jukebox.
+This button is red by default, indicating that the current Playbox entity is occupied by you. Clicking this button releases your ownership of the Playbox entity, the playback interface will close, and other players can then right-click to open the interface and use the Playbox.
 
-## MIDI Jukebox Control
+## MIDI Playbox Control
 
-The MIDI Jukebox supports redstone control. Like normal blocks, it can transmit redstone signals, but it is not a redstone component itself.
+The MIDI Playbox supports redstone control. Like normal blocks, it can transmit redstone signals, but it is not a redstone component itself.
 
-The MIDI Jukebox receives redstone pulse signals. Upon receiving one pulse signal, it will toggle its playback state once.
+The MIDI Playbox receives redstone pulse signals. Upon receiving one pulse signal, it will toggle its playback state once.
 
-A single MIDI Jukebox shares a single entity for the entire server in multiplayer mode. To avoid usage conflicts between different clients, the MIDI Jukebox implements player binding. After being placed for the first time, it automatically binds the player who first opens the playback interface. Before this player actively releases it or the block is broken and replaced, other players on the server cannot right-click to open the playback interface, but they can still control the Jukebox's playback state via redstone.
+A single MIDI Playbox shares a single entity for the entire server in multiplayer mode. To avoid usage conflicts between different clients, the MIDI Playbox implements player binding. After being placed for the first time, it automatically binds the player who first opens the playback interface. Before this player actively releases it or the block is broken and replaced, other players on the server cannot right-click to open the playback interface, but they can still control the Playbox's playback state via redstone.
 
 Custom Sound Source Resource Pack
 =======
@@ -324,7 +324,7 @@ The mod provides two installation versions: Full version and Lightweight version
 
 Full version: Contains all resource files for the mod. Resource files cannot be replaced. The file size is larger, suitable for players who don't want to tinker.
 
-Lightweight version: Does not contain the mod's instrument sound files. You need to manually load the specified resource pack to play instruments. The mod file size is very small, suitable for servers or players who want a customized client instrument sound. Note: If you do not add the resource pack for the corresponding instrument according to the mod's resource format, playing the instrument or syncing MIDI Jukebox notes from other players will not produce the corresponding instrument sound.
+Lightweight version: Does not contain the mod's instrument sound files. You need to manually load the specified resource pack to play instruments. The mod file size is very small, suitable for servers or players who want a customized client instrument sound. Note: If you do not add the resource pack for the corresponding instrument according to the mod's resource format, playing the instrument or syncing MIDI Playbox notes from other players will not produce the corresponding instrument sound.
 
 Both the full and lightweight versions will not affect multiplayer functionality.
 
@@ -369,7 +369,7 @@ A4. Replacing the entire vanilla player model system means the vanilla item rend
 Q5. Why doesn't the violin have a bow?<br>
 A5. Adding a bow to the violin would affect the usage and performance logic of the violin, and also make the model's animation while playing the violin more complex. My personal artistic ability is limited, and I really don't know how to handle this part. (Actually, another reason is laziness. Anyway, everyone can just treat it as a regular instrument for now﹙ˊ_>ˋ﹚)
 
-Q6. The MIDI Jukebox speed is incorrect/stuttering/speeding up.<br>
+Q6. The MIDI Playbox speed is incorrect/stuttering/speeding up.<br>
 A6. Because the mod uses Minecraft's built-in tick system for timing, its accuracy is affected by fluctuations in the server/client's tick rate.
 
 Q7. Will older versions be supported? Will there be Forge/Fabric versions in the future?<br>
