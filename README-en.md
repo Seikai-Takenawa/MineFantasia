@@ -5,178 +5,251 @@
   <strong>Language</strong>: <a href="README-en.md">English</a> | <a href="README.md">简体中文</a>
 </p>
 
+
 Introduction
 =======
-Welcome to MineFantasia! This is a Minecraft mod about music.<br>
+Welcome to MineFantasia! This is a music mod for Minecraft.
 
-The mod is still under development, but you can download it to experience the currently implemented features.<br>
+The mod is currently still in development, but you can download it to experience the features that have been implemented so far.
 
-The mod provided various of musical instruments such as piano, different kinds of synth, strings and woodwinds. Just right-click the instrument, and then you can play it with your keyboard or mouse in the open screen.
+The mod provides various instruments such as pianos, synthesizers, string instruments, and wind instruments. Simply right-click the corresponding instrument to open a new interface where you can start playing using your keyboard or mouse.
 
-Besides the instruments, the mod also provided a multi-player playing system which means you can play instruments with your friends and complete brilliant musical ensemble pieces.<br>
+In addition to instruments, the mod also provides a multiplayer ensemble system. This means you can perform a magnificent instrumental ensemble with your friends.
 
 Instrument Performance System
 =======
-This mod adds a musical instrument performance system to Minecraft, along with a wide variety of instruments based on it. This also serves as the core functionality implemented by the mod.
+The mod adds an instrument performance system to Minecraft, and based on this, adds a wide variety of instruments. This is the core functionality of the mod.
 
-## Instrument Performance Screen
+## Instrument Performance Interface
 
-When a player holds an instrument in their main hand or right-clicks on a placed instrument, the instrument performance screen will open:
+When a player holds an instrument in their main hand or right-clicks on a placed instrument, the instrument performance interface will open:
 
-![Performance Screen](example.perform.screen.en.png)
+![Performance Interface](example.perform.screen.en.png)
 
-`Performance Area`: Consists of 21 blocks arranged from top to bottom and left to right. Each block maps to the keyboard keys Q–U, A–J, Z–M, with the name of the corresponding note displayed in the middle of the current block.
+`Performance Area`: Contains 21 blocks, from top to bottom, left to right. Each block corresponds to the keyboard keys Q-U, A-J, Z-M, with the name of the corresponding note displayed in the middle of the block.
 
-`Setting Area`: Contains 5 function buttons, with three located in the bottom-left corner and two in the bottom-right corner.
+`Settings Area`: Contains 5 function buttons, three in the lower-left corner and two in the lower-right corner.
 
-## Bottom-left corner of the screen:
+### Lower-Left Corner of the Interface:
 
-There are three buttons, arranged from top to bottom: `Raise Button`, `Current Central Octave Number` / `Number of Semitones Raised`, and `Lower Button`.
+There are 3 buttons, from top to bottom: `Raise Button`, `Current Center Octave Number`/`Number of Raised Semitones`, `Lower Button`.
 
-When the middle button displays no `+` or `-` sign, it shows the `Current Central Octave Number`; when it displays a `+` or `-` sign, it shows the `Number of Semitones Raised`. The two values are recorded independently yet interact with each other. Within a single performance session, each value is tracked separately and will not be reset when switching between displays.
+When the middle button shows no `+` or `-` sign, it displays the `Current Center Octave Number`. When it shows `+` or `-`, it displays the `Number of Raised Semitones`. The records for both are independent but interact with each other. Within a single performance session, they only record their respective data separately but will not reset upon switching.
 
-When in the mode displaying `Central Octave Number`, clicking the `raise/lower button` will shift all 21 notes in the `Performance Area` up or down by one `octave` (i.e., 12 semitones). When in the mode displaying `Number of Semitones Raised`, clicking the `raise/lower button` will shift all 21 notes up or down by one `semitone`. All changes will be reflected in the blocks of the performance area.
+When you click the `Raise/Lower Button` while in `Center Octave Number` mode, all 21 notes in the `Performance Area` will be raised/lowered by one `octave` (12 semitones). When in `Number of Raised Semitones` mode, clicking the `Raise/Lower Button` will raise/lower all 21 notes by one `semi-tone`. All changes will be displayed in the performance area blocks.
 
-It is important to note that in the `Central Octave Number` mode, the pitch raise/lower range will not exceed or fall below the highest octave number supported by the instrument. In the `Number of Semitones Raised` mode, however, the upper and lower limits are expanded by one octave to ensure full coverage of all notes.
+Note: In `Center Octave Number` mode, the pitch raise/lower range will not exceed/go below the instrument's recorded highest/lowest octave number. In `Number of Raised Semitones` mode, to ensure coverage of all notes, the upper and lower limits are expanded by one octave group.
 
-These three buttons are bound to the arrow keys on the keyboard. The Up key serves as the `Raise Button`, the Down key serves as the `Lower Button`, the Right key switches from `Current Central Octave Number` to `Number of Semitones Raised`, and the Left key switches from `Number of Semitones Raised` to `Current Central Octave Number`.
+These three buttons are bound to the arrow keys on the keyboard. Up is `Raise Button`, Down is `Lower Button`, Right switches from `Current Center Octave Number` to `Number of Raised Semitones`, Left switches from `Number of Raised Semitones` to `Current Center Octave Number`.
 
-## Bottom-right corner of the screen:
+### Lower-Right Corner of the Interface:
 
-There are two buttons, arranged from top to bottom: `Hide Performance Blocks Button` (featuring an eye icon) and `Settings Button` (featuring a gear icon).
+There are 2 buttons, from top to bottom: `Hide Performance Blocks Button` (featuring an eye icon) and `Settings Button` (featuring a gear icon).
 
-When the `Hide Performance Blocks Button` is clicked, the 21 blocks in the `Performance Area` and the `Settings Button` will be hidden, and the performance screen background will become fully transparent. Clicking again will restore them.
+Clicking the `Hide Performance Blocks Button` will hide the 21 blocks in the `Performance Area` and the `Settings Button`, making the performance interface background fully transparent. Clicking again will restore them.
 
-When the `Settings Button` is clicked, the screen enters `Note Edit Mode`. You can select a block to modify its note name using the keyboard or mouse, enter the new note name in the input field below, and press `Enter` to confirm the change.
+Clicking the `Settings Button` enters `Note Edit Mode`. You can select a block whose note name needs changing via keyboard or mouse, enter the new note name in the input field below, and press `Enter` to complete the modification.
 
 ## Note Configuration
 
-Due to limitations of the vanilla Minecraft registration system, the naming convention for notes follows the format: `Octave Number (octave position) + Note Name`.
+Due to limitations of the vanilla Minecraft registration system, the naming rule for note names is: `Octave Group Number (octave position) + Note Name`.
 
-The `Octave Number` follows the numbering used in the FL Studio piano roll. Note names are in lowercase letters, with `s` used before the note name to represent a sharp (`#`). For example: `5c`, `6sc`, etc. The mod does not include flat notes.
+The `Octave Group Number` refers to the numbering used in FL Studio's piano roll. Note names are all lowercase letters, with `s` preceding the note name to represent `#` (sharp). For example: `5c`, `6sc`. The mod does not introduce flat notes.
 
-The mod categorizes notes into single-tone notes and sustained notes. Currently, single-tone instruments include: Piano, Kalimba, and Harp. Sustained-tone instruments include: all Synthesizers, Violin, and Flute.
+The mod divides notes into Staccato and Sustained notes. Currently, Staccato instruments include: Piano, Kalimba, Harp. Sustained instruments include: all Synthesizers, Violin, Flute.
 
-The playing mechanism for single-tone instruments is as follows: when a corresponding note is clicked, the corresponding sound is played once. If a note is long-pressed in the performance screen, the corresponding note will be played repeatedly at a fast rate. **Therefore, when you decide to replace the sound source resource pack for any single-tone instrument, please ensure that the individual sound does not last too long. (1–2 seconds is recommended, excluding reverb tail effects.) Otherwise, it may lead to disastrous consequences!**
+The playing principle for Staccato instruments is: when a note is clicked, the corresponding sound plays once. If you long-press a note in the performance interface, the corresponding note will repeat rapidly. Furthermore, if you replace the piano sound source using a resource pack, please ensure that the length of each individual piano sound does not exceed the original sound source's length. Otherwise, it may cause disastrous consequences!
 
-For sustained-tone instruments: the maximum duration for which a single note can be played is determined by the length of the sound source file. In the mod's default version, all sustained-tone instruments can sustain a note for up to 8 seconds (equivalent to the length of 4 bars at 120 BPM in FL Studio).
+For Sustained instruments: The maximum duration a single note can be played is determined by the length of the sound source file. The mod's default sustained sounds can last up to 8 seconds (the length of 4 measures at 120 BPM in FL Studio).
 
-File System And Custom Player Model
+File System
 =======
-To make the mod's instrument performance system more vivid and to accommodate instrument performance animations, the mod has added an animation system based on GeckoLib5. Based on the latest GeckoLib5, it also replaces the player model across all perspectives in vanilla Minecraft. While you are playing an instrument, the model will perform corresponding playing actions.
-
-The mod also redesigns the camera follow system for the first-person perspective. Although the performance of this system still needs improvement when quickly moving the view left and right or in a few rare states, it is capable of delivering a true first-person player perspective and maintaining good functionality in most situations.
-
-The model support replacement, but ysm models or other models are <strong>not supported</strong> in this mod. You should use GeckoLib model.
-
-## File System Related
-
-When you run the mod for the first time and enter the world, a dedicated folder for the mod will be created in your `mods` folder. <br>
+After you run the mod for the first time and enter a world, the mod will generate its dedicated folder inside your `mods` folder.
 
 Its file structure is:<br>
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
 <summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
- Click to Expand
+ Click to expand
 </summary>
 
-📁`minefantasia`<br>
-├──📁`midi`<br>
-├──📁`model`<br>
-│ └──📄`player.geo.json`<br>
-├──📁`animation`<br>
-│ └──📄`player.animation.json`<br>
-├──📁`texture`<br>
-│ └──🖼️`player.png`<br>
-└──📄`uuid.json`<br>
+```
+📁`minefantasia`
+├── 📁`midi`
+├── 📁`ins`
+│   └── 📁`custom_synth`
+│       └── 📄`example.json`
+├── 📁`model`
+│   └── 📄`player.geo.json`
+├── 📁`animation`
+│   └── 📄`player.animation.json`
+├── 📁`texture`
+│   └── 🖼️`player.png`
+└── 📄`uuid.json`
+
+```
 
 </details>
 
-Among them, the `midi` folder stores all your MIDI files (unrelated to model replacement), the `model` folder stores all your GeckoLib model files (`key.geo.json`),
-the `animation` folder stores all your GeckoLib model animation files (`key.animation.json`), and the `texture` folder stores all your GeckoLib model textures (`key.png`).<br>
+Here, the `midi` folder stores all your MIDI files (unrelated to model replacement), the `ins` folder stores the JSON information files for child instruments of all General Instruments, the `model` folder stores all your GeckoLib model files `key.geo.json`, the `animation` folder stores all your GeckoLib model animation files `key.animation.json`, and the `texture` folder stores all your GeckoLib model textures `key.png`.
 
-Except for the `midi` folder, each directory will generate a default JSON file with `player` as the `key`. You should not remove or replace them.
+Except for the `midi` and `ins` folders, a default JSON file with `player` as the `key` will be generated in each directory. You should not remove or replace them.
 
-## Custom Player Model Related
+Custom General Instruments
+=======
+Starting from version `0.0.9-beta`, the mod will gradually add `General Instrument` versions for various instruments.
 
-The `uuid.json` file is a file named after the player's `UUID`. It is generated only when the player enters the world and contains four key record fields:<br>
+`General Instruments` allow players to add different timbres of the same instrument type themselves. Their performance interface is largely consistent with the built-in instruments, only adding a child instrument switching module above the performance area.
+
+General Instruments operate on the model of `Mod reads basic info and completes registration + Player imports sound source resource pack`. Information related to registration is placed in the mod folder: `mods/minefantasia/ins`, subdivided by each general instrument within this folder.
+
+Their file structure is:
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
 <summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
- Click to Expand
+ Click to expand
+</summary>
+
+```
+📁`minefantasia`
+└── 📁`ins`
+    ├── 📁`通用乐器1`
+    │   ├── 📄`子乐器1.json`
+    │   ├── 📄`子乐器2.json`
+    │   └── ...
+    ├── 📁`通用乐器2`
+    │   ├── 📄`子乐器1.json`
+    │   ├── 📄`子乐器2.json`
+    │   └── ...
+    └── ...
+
+```
+
+
+</details>
+
+The naming of the child instrument's JSON file must not conflict with existing mod instruments. For example, for the General Synthesizer, if there is a child instrument named `sunshine`, its JSON file should be named `sunshine.json` and placed in the `ins/custom_synth` folder.
+
+The information contained is as follows:
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ Click to expand
 </summary>
 
 📄`uuid.json`<br>
-├── 🗝️`key` field: must be a unique and distinct identifier used within the mod's code to register, label, and bind the corresponding player model.<br>
-├── 🗝️`model` field: the absolute path to your custom GeckoLib player model file, without the `.geo.json` extension.<br>
-├── 🗝️`texture` field: the absolute path to your custom player model texture, including the full filename.<br>
-└── 🗝️`animation` field: the absolute path to your custom GeckoLib player model animation file, without the `.animation.json` extension.<br>
+├── 🗝️`name` field: The name of the child instrument, used for internal game identification.
+├── 🗝️`minOctave` field: The lowest octave of the child instrument, should be greater than 0.
+├── 🗝️`maxOctave` field: The highest octave of the child instrument, should be less than 10.
+└── 🗝️`fadeDuration` field: Only valid for sustained instruments, defines the time from when a key is released until the sound completely fades out.
 
 </details>
 
-To facilitate model registration and identification within the mod, all model file names and bone names must be prefixed with your model `key`. For example: `key.geo.json`, `key.head`, and so on.<br>
-
-The mod does not impose strict rules or limitations on the number of model bones or their structure. However, please ensure that your custom GeckoLib model includes the following essential bones that meet these requirements:<br>
+General instruments currently added are as follows:
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
 <summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
- Click to Expand
+ Click to expand
+</summary>
+
+🎵-General Synthesizer
+
+</details>
+
+More general instruments will be adapted in the future.
+
+To facilitate players adding resources for General Instruments, the mod tool MFPackager has been launched on GitHub. This tool can automatically package resources in a specified path into a resource pack recognizable by the mod and automatically generate the registration JSON files for child instruments.
+
+Custom Player Model
+=======
+To make the mod's instrument performance system more vivid and to适配 instrument performance animations, the mod adds an animation system based on GeckoLib 5, and based on the latest GeckoLib 5, replaces the vanilla Minecraft player model for all perspectives. While you are playing an instrument, the model will also perform corresponding playing actions.
+
+The mod also redesigns a camera following system for the first-person perspective. Although the performance of this system still needs improvement during rapid left/right view movement and in very few specific states, in most cases, this system achieves a true player first-person perspective and maintains good operation.
+
+Model replacement is supported, but YSM models or models from other mods are _not supported_ in this mod. You should use GeckoLib models.
+
+The `model`, `animation`, `texture` folders and `uuid.json` under the mod folder are related to custom player models.
+
+The `uuid.json` file is a file named after the player's UUID, generated only when the player enters the world. Its content contains four key record fields:<br>
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ Click to expand
+</summary>
+
+📄`uuid.json`<br>
+├── 🗝️`key` field: The keyword for the model used by the player, used for registration, tagging, and binding the corresponding player model ID within the mod code. Different players can use the same key.<br>
+├── 🗝️`model` field: The absolute path to the custom GeckoLib player model file. The `.geo.json` suffix is **not required**.<br>
+├── 🗝️`texture` field: The absolute path to the custom player GeckoLib model texture, requires the full file name.<br>
+└── 🗝️`animation` field: The absolute path to the custom GeckoLib player model animation file. The `.animation.json` suffix is **not required**.<br>
+
+</details>
+
+To facilitate internal model registration and differentiation within the mod, all model file names and bones need your model's `key` as a prefix, e.g., `key.geo.json`, `key.head`, etc.
+
+The mod does not have strictly specific regulations or restrictions on the number of model bones or their structure, but please ensure your custom GeckoLib model contains the following important bones as required:<br>
+<details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
+<summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
+ Click to expand
 </summary>
 
 📄`key.geo.json`<br>
-├── 🦴`key.head` bone: This bone is used by the mod to calculate the camera coordinates and offsets in first-person view, as well as to locate the model's head position and compute head rotation based on the viewing angle.<br>
-├── 🦴`key.cameraAnchor` bone: This bone <strong>must</strong> contain only one `locator` named `cameraAnchor`, and its parent must be the model's root bone (`key.root`). This bone is used by the mod to calculate the camera coordinates and offsets in first-person view.<br>
-├── 🦴`key.rightHandItem` bone: This bone <strong>must</strong> contain only one `locator` named `rightHandItem`, and its parent <strong>must</strong> be the corresponding hand bone to allow the item to follow animations. This bone is used by the mod to calculate the rendering position and offset of the player's right-hand (main-hand) item across all perspectives.<br>
-└── 🦴`key.leftHandItem` bone: This bone <strong>must</strong> contain only one `locator` named `leftHandItem`, and its parent <strong>must</strong> be the corresponding hand bone to allow the item to follow animations. This bone is used by the mod to calculate the rendering position and offset of the player's left-hand (off-hand) item across all perspectives.<br>
+├── 🦴`key.head` bone: This bone is used internally by the mod to calculate the camera's coordinates and offset in first-person view; it also positions the model's head and allows it to rotate with the camera.<br>
+├── 🦴`key.cameraAnchor` bone: This bone must only contain a `locator`, and the locator's name **must** be `cameraAnchor`. Its parent is recommended to be the model's root bone (`key.root`) or the head bone (`key.head`). This bone is used by the mod to calculate the camera's coordinates and offset in first-person view.<br>
+├── 🦴`key.rightHandItem` bone: This bone must only contain a `locator`, and the locator's name **must** be `rightHandItem`. Its parent must be the corresponding hand bone to allow the item to move with the animation. This bone is used internally by the mod to calculate the rendering position and offset of the player's right hand (main hand) item in all views.<br>
+└── 🦴`key.leftHandItem` bone: This bone must only contain a `locator`, and the locator's name **must** be `leftHandItem`. Its parent must be the corresponding hand bone to allow the item to move with the animation. This bone is used internally by the mod to calculate the rendering position and offset of the player's left hand (offhand) item in all views.<br>
 
 </details>
 
-The mod uses the `pivot` values of the above four bones for coordinate calculations. Please ensure their pivot values are set correctly.<br>
-For other bones, such as their child bones and naming conventions, the mod does not impose strict restrictions.<br>
+The mod uses the `pivot` of the above 4 bones for coordinate calculations, please ensure their pivot values are correct.<br>
+For other bones besides these 4, their child bones, and element names within bones, the mod does not have strict restrictions.
 
-Please note that the current player model replacement system in the mod does <strong>not</strong> automatically synchronize the models being used by each player in multiplayer mode. Model changes still require manual adjustments to the content in `uuid.json`. This means that if you wish to showcase your model to others, you must send them all the JSON files of your model and instruct them to manually modify <strong>the corresponding `uuid.json` file on their own device</strong>.<br>
+Please note that the mod's current player model replacement system does not automatically synchronize the models being used by individual players in multiplayer, and still requires manual adjustment of the content in `uuid.json` to change the model. This means if you want to show your model to others, you need to send all JSON files of your model to them and ask them to manually modify your corresponding `uuid.json` on **their device**.
 
 Custom Model Animations
 =======
-The mod supports custom player model animations. Since all animation names are <strong>hardcoded</strong> in the mod's source code, your custom model animation names must match the hardcoded animation names.<br>
-The currently supported animations and their naming requirements are as follows:<br>
+The mod supports custom player model animations. Since all animation names are hardcoded in the mod's code, your custom model animation names must be the same as the animation names hardcoded in the mod.<br>
+Currently supported animations and their naming requirements are as follows:<br>
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
 <summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
- Click to Expand
+ Click to expand
 </summary>
 
 📄`key.animation.json`<br>
-├── 🎬`key.walk`：The animation played when the player model is walking.<br>
-├── 🎬`key.idle`：The animation played when the player model is idle.<br>
-├── 🎬`key.crouch`：The animation played when the player model is sneaking.<br>
-├── 🎬`key.swim`：The animation played when the player model is swimming. When this animation is active, the player's held item is not displayed. Since vanilla Minecraft changes the player's collision box to `0.6x0.6x0.6` in this state, to ensure the player model's head rotates correctly and the camera coordinates are properly applied, follow these steps when creating this animation: after completing the overall model animation, navigate to the `Animations` page in BlockBench and adjust the entire model by moving the `key.root` bone so that the `pivot` of the head bone `key.head` aligns with the coordinate `[0, 6.4, 0]`. Additionally, ensure that the `key.root` bone has **no** `Rotation` offset.<br>
-├── 🎬`key.fly`：The animation played when the player model is flying with an elytra. When this animation is active, the player's held item is not displayed. Since vanilla Minecraft changes the player's collision box to `0.6x0.6x0.6` in this state, to ensure the player model's head rotates correctly and the camera coordinates are properly applied, follow these steps when creating this animation: after completing the overall model animation, navigate to the `Animations` page in BlockBench and adjust the entire model by moving the `key.root` bone so that the `pivot` of the head bone `key.head` aligns with the coordinate `[0, 6.4, 0]`. Additionally, ensure that the `key.root` bone has **no** `Rotation` offset.<br>
-├── 🎬`key.piano`：The overall animation played when the player model is performing using a piano, such as changes in posture.<br>
-├── 🎬`key.kalimba`：The overall animation played when the player model is performing using a kalimba, such as changes in posture.<br>
-├── 🎬`key.harp`：The overall animation played when the player model is performing using a harp, such as changes in posture.<br>
-├── 🎬`key.violin`：The overall animation played when the player model is performing using a violin, such as changes in posture.<br>
-├── 🎬`key.synth`：The overall animation played when the player model is performing using any type of synthesizer, such as changes in posture.<br>
-├── 🎬`key.pianoPlay`：The instantaneous animation triggered when the player model presses a note while performing on a piano with the performance interface open, such as hand movements.<br>
-├── 🎬`key.kalimbaPlay`：The instantaneous animation triggered when the player model presses a note while performing on a kalimba with the performance interface open, such as hand movements.<br>
-├── 🎬`key.harpPlay`：The instantaneous animation triggered when the player model presses a note while performing on a harp with the performance interface open, such as hand movements.<br>
-├── 🎬`key.violinPlay`：The instantaneous animation triggered when the player model presses a note while performing on a violin with the performance interface open, such as hand movements.<br>
-├── 🎬`key.synthPlay`：The instantaneous animation triggered when the player model presses a note while performing on a synth with the performance interface open, such as hand movements.<br>
-└──
+├── 🎬`key.walk`: Animation played when the player model is walking.<br>
+├── 🎬`key.idle`: Animation played when the player model is idle.<br>
+├── 🎬`key.crouch`: Animation played when the player model is crouching.<br>
+├── 🎬`key.swim`: Animation played when the player model is swimming. Held items are not displayed when this animation plays. Since vanilla Minecraft changes the player's collision box size to `0.6x0.6x0.6` in this situation, to allow the player model's head to rotate normally and correctly apply camera coordinates, when creating this animation, after completing the overall model animation, move the entire model (`key.root`) within BlockBench's `Animation` tab to align the `pivot` of the head bone `key.head` to coordinates `[0, 6.4, 0]`, and ensure the `key.root` bone has **no** `Rotation` offset.<br>
+├── 🎬`key.fly`: Animation played when the player model is flying with an elytra. Held items are not displayed when this animation plays. Since vanilla Minecraft changes the player's collision box size to `0.6x0.6x0.6` in this situation, to allow the player model's head to rotate normally and correctly apply camera coordinates, when creating this animation, after completing the overall model animation, move the entire model (`key.root`) within BlockBench's `Animation` tab to align the `pivot` of the head bone `key.head` to coordinates `[0, 6.4, 0]`, and ensure the `key.root` bone has **no** `Rotation` offset.<br>
+├── 🎬`key.piano`: Overall animation played when the player model is performing on the piano, such as posture changes.<br>
+├── 🎬`key.kalimba`: Overall animation played when the player model is performing on the kalimba, such as posture changes.<br>
+├── 🎬`key.harp`: Overall animation played when the player model is performing on the harp, such as posture changes.<br>
+├── 🎬`key.violin`: Overall animation played when the player model is performing on the violin, such as posture changes.<br>
+├── 🎬`key.synth`: Overall animation played when the player model is performing on all types of synthesizers, such as posture changes.<br>
+├── 🎬`key.banjo`: Overall animation played when the player model is performing on the banjo, such as posture changes.<br>
+├── 🎬`key.drumKit`: Overall animation played when the player model is performing on the drum kit, such as posture changes.<br>
+├── 🎬`key.bass`: Overall animation played when the player model is performing on the bass, such as posture changes.<br>
+├── 🎬`key.guitar`: Overall animation played when the player model is performing on the guitar, such as posture changes.<br>
+├── 🎬`key.pianoPlay`: Instant animation triggered when a note is pressed while performing on the piano with the performance interface open, such as hand movements.<br>
+├── 🎬`key.kalimbaPlay`: Instant animation triggered when a note is pressed while performing on the kalimba with the performance interface open, such as hand movements.<br>
+├── 🎬`key.harpPlay`: Instant animation triggered when a note is pressed while performing on the harp with the performance interface open, such as hand movements.<br>
+├── 🎬`key.violinPlay`: Instant animation triggered when a note is pressed while performing on the violin with the performance interface open, such as hand movements.<br>
+├── 🎬`key.synthPlay`: Instant animation triggered when a note is pressed while performing on the synthesizer with the performance interface open, such as hand movements.<br>
+├── 🎬`key.banjoPlay`: Instant animation triggered when a note is pressed while performing on the banjo with the performance interface open, such as hand movements.<br>
+├── 🎬`key.drumKitPlay`: Instant animation triggered when a note is pressed while performing on the drum kit with the performance interface open, such as hand movements.<br>
+├── 🎬`key.bassPlay`: Instant animation triggered when a note is pressed while performing on the bass with the performance interface open, such as hand movements.<br>
+└── 🎬`key.guitarPlay`: Instant animation triggered when a note is pressed while performing on the guitar with the performance interface open, such as hand movements.<br>
 
 </details>
 
-Additional Note: 
+Additional note regarding the reason why the `Rotation` offset of the `key.root` bone cannot be modified for the `key.swim` and `key.fly` animations: In practice, if a rotational offset based on the model's root bone is added, GeckoLib's rotational calculations for the player's head bone following the camera perspective may deviate or even fail. The exact reason is currently unclear, so for now, we can only avoid directly modifying the root bone's rotational offset during animation production.
 
-The reason why the `Rotation` of the `key.root` bone must not be modified for the `key.swim` and `key.fly` animations is that, in practice, adding a rotation offset to the model's root bone can cause GeckoLib's calculations for rotating the player's head bone according to the camera perspective to become inaccurate or even fail. The exact cause is currently unclear, so for now, it is necessary to avoid directly modifying the root bone's rotation offset during animation creation.
-
-Due to limited artistic expertise, the default model does not include performance animations for certain instruments, nor has it been thoroughly tested and verified. However, the mod still retains the relevant calls for these animations. You can use the animation names mentioned above in your custom models to add animations for the corresponding instruments. If any issues arise, please feel free to submit an issue on the mod's [GitHub repository issues page](https://github.com/Seikai-Takenawa/MineFantasia/issues).
+Due to limited personal artistic ability, the default model does not have performance animations for certain instruments, and thus hasn't been thoroughly tested and verified. However, the mod still retains the calls for these animations. You can use the animation names mentioned above in your custom model to add replacement animations for performing the corresponding instruments. If any issues arise, you can post an issue on this mod's [GitHub repository issues page](https://github.com/Seikai-Takenawa/MineFantasia/issues).
 
 MIDI System
 =======
-The mod implements reading local MIDI files and can play them using the mod's built-in instrument sounds.
+The mod implements reading local MIDI files and can play them using the mod's internal instrument sounds.
 
-All MIDI files are stored in the `mods/minefantasia/midi` folder:
+All MIDI files are stored in the `mods/minefantasia/midi` folder:<br>
 
 <details style="background-color: #a9a9a933; border-radius: 8px; padding: 15px; border: 1px solid #e1e4e8;">
 <summary style="cursor: pointer; font-weight: bold; color: #ffffffcc; font-size: 1.1em;">
- Click to Expand
+ Click to expand
 </summary>
 
 📁`minefantasia`<br>
@@ -184,121 +257,121 @@ All MIDI files are stored in the `mods/minefantasia/midi` folder:
 
 </details>
 
-MIDI files must have the `.mid` extension. The mod supports single-track and multi-track playback for `format0` and `format1` MIDI files, and single-track playback for `format2` MIDI files.
+The suffix for MIDI files must be `.mid`. The mod supports single-track and multi-track simultaneous playback for `format0` and `format1` MIDI files, and single-track playback for `format2` MIDI files.
 
-## MIDI Playbox and Its Screen
+## MIDI Jukebox and its Interface
 
-In the mod, MIDI file playback is implemented through the mod's block entity: the MIDI Playbox. Its screen is shown in the following figure:
+In the mod, MIDI file playback is achieved through the mod's block entity: the MIDI Jukebox. Its interface is shown below:
 
-![MIDI Playbox Screen](example.midi.screen.png)
+![MIDI Jukebox Interface](example.midi.screen.png)
 
-The MIDI Playbox screen has three selection panels, from left to right:
+The MIDI Jukebox interface has three selection sections, from left to right:
 
 ### Instruments
 
-This panel displays all instruments from the mod by default. Here, you can select the mod instrument to be used for playing the track. Only one instrument can be selected at a time in this panel.
+This section will display all instruments from the mod by default. In this section, you can select the mod instrument to be used for playing the track. Only one instrument can be selected at a time in this section.
 
 ### MIDI Files
 
-This panel automatically reads and displays the names of all MIDI files stored in the `mods/minefantasia/midi` folder. Here, you can select the MIDI file to be played. Once selected, the mod will automatically parse the MIDI file and display all its tracks sequentially in the `Tracks` panel. Only one MIDI file can be selected at a time in this panel.
+This section automatically reads the names of all MIDI files stored in your `mods/minefantasia/midi` folder and displays them. In this section, you can select the MIDI file to be played. After selection, the mod automatically parses the MIDI file and displays all tracks of the MIDI file in the `Tracks` section in sequence. Only one MIDI file can be selected at a time in this section.
 
 ### Tracks
 
-Once you have selected a MIDI file, this panel will read the selected MIDI file and display all its tracks sequentially. Here, you can select multiple tracks at once.
+After you select a MIDI file, this section reads the selected MIDI file and displays all tracks within it in sequence. In this section, you can select multiple tracks at once.
 
-Below each panel, there are page-turning buttons indicated by left and right arrows. The default number of entries displayed per panel is 5.
+Below each section, there are page-turning buttons indicated by left and right arrows. The default number of information entries displayed per section is 5.
 
-Additionally, the MIDI playbox screen features three buttons, arranged from left to right as follows:
+Additionally, the MIDI Jukebox interface has three buttons, from left to right:
 
-### Confirmed
-This button is specifically used for configuring settings before triggering with a redstone signal, such as selecting the instrument and tracks to play. When not playing, clicking this button will not start playback of the selected tracks. To play, you must trigger it with a redstone signal. If clicked while playback is in progress, the system will check whether the selected instrument or other options have changed. If changes are detected, playback will stop and immediately restart using the new configuration.
+### Confirm
+This button is specifically used for setting information before redstone signal triggering, such as setting the performance instrument and performance tracks. If clicked while not playing, it will not play the selected tracks. To play, you can use a redstone signal trigger. If clicked while playing, the system will check if options like the instrument selection have changed. If they have, it will stop playback and immediately start playing with the new configuration.
 
 ### Play
-This button is used to immediately play the selected tracks after choosing the instrument and tracks.
+This button is used to immediately play the selected tracks after selecting the performance instrument and tracks.
 
-Please note: If you click play without selecting any instrument or track, the MIDI playbox will leave the relevant information empty.
+Please note: If you click Play without selecting any instrument or track, the MIDI Jukebox will set the relevant information to empty.
 
 ### Stop
-This button is used to immediately stop playback on the current MIDI playbox and clear the previous playback information, such as the selected instrument and tracks. If this button is not clicked, the information will not be lost after the MIDI sequence finishes playing normally. Once this button is clicked, the MIDI playbox must be reconfigured.
+This button is used to immediately stop the current MIDI Jukebox playback and clear previous playback information such as the performance instrument and tracks. If you do not click this button, the information will not be lost after the MIDI sequence finishes playing normally. After clicking this button, you need to reconfigure the MIDI Jukebox.
 
-In the top-left corner of the interface, there are two additional buttons, arranged from top to bottom:
+There are also two buttons in the upper-left corner of the interface, from top to bottom:
 
-### Network Sync Playback Button
-When this button is activated, it will turn green and broadcast the currently playing MIDI file to all players on the server. This synchronization feature is independent for each client. This means that even if other players do not have the MIDI file you are using, they will still be able to hear the music. This button can be adjusted at any time during playback.
+### Network Sync Play Button
+When this button is activated, it turns green and will play the currently playing MIDI file to all players on the server. This sync function is independent on each client. This means that even if other players do not have the MIDI file you are playing, they can still hear the music. This button can be adjusted at any time during playback.
 
-### Stop Control Button
-This button is red by default, indicating that the current MIDI playbox block entity is occupied by you. Clicking this button will release your occupancy of the block entity and close the playback screen, allowing other players to right-click and open the screen to use the playbox.
+### Release Control Button
+This button is red by default, indicating that the current Jukebox entity is occupied by you. Clicking this button releases your ownership of the Jukebox entity, the playback interface will close, and other players can then right-click to open the interface and use the Jukebox.
 
-## The Controls of MIDI Playbox
+## MIDI Jukebox Control
 
-The MIDI playbox supports redstone control. Like ordinary blocks, it can transmit redstone signals, but it is not a redstone component itself.
+The MIDI Jukebox supports redstone control. Like normal blocks, it can transmit redstone signals, but it is not a redstone component itself.
 
-The MIDI playbox accepts redstone pulse signals. Upon receiving a pulse signal, it toggles its playback state.
+The MIDI Jukebox receives redstone pulse signals. Upon receiving one pulse signal, it will toggle its playback state once.
 
-In multiplayer mode, a single MIDI playbox shares a single entity across the entire server. To prevent conflicts between different clients, the MIDI playbox implements player binding. Upon initial placement, the player who first opens the playback screen will be automatically bound to the MIDI playbox.
-Until this player actively releases the binding or the block is broken and replaced, other players on the server cannot open the playback screen by right-clicking, though they can still control the MIDI playbox's playback state via redstone.
+A single MIDI Jukebox shares a single entity for the entire server in multiplayer mode. To avoid usage conflicts between different clients, the MIDI Jukebox implements player binding. After being placed for the first time, it automatically binds the player who first opens the playback interface. Before this player actively releases it or the block is broken and replaced, other players on the server cannot right-click to open the playback interface, but they can still control the Jukebox's playback state via redstone.
 
 Custom Sound Source Resource Pack
 =======
-If you are not satisfied with the default sound source of a particular instrument in the mod, and you have the means and ability to obtain an alternative sound source — for example, by sampling the instrument yourself — you can replace the relevant sound source files in the corresponding resource pack on your own.
+If you don't like the default sound source of a particular instrument in the mod, and you have the means and ability to obtain sound sources (e.g., sampling instruments yourself), you can replace the sound source files in the relevant resource pack yourself.
 
-The mod uses the Ogg format for sound sources. The requirements for Ogg files (such as note duration, note naming conventions, etc.) have already been detailed in the [Note Configuration](#NoteConfiguration) section above and will not be repeated here.
+The mod's sound sources use the Ogg format. The requirements for Ogg files (such as note duration, note naming format, etc.) have been detailed in the [Note Configuration](#note-configuration) section above and will not be repeated here.
 
 Installation
 =======
-The mod provides two installation versions: Full Version and Lite Version.
+The mod provides two installation versions: Full version and Lightweight version.
 
-Full Version: Contains all resource files of the mod. These resource files cannot be replaced. The file size is larger, suitable for players who do not want to tinker with the mod.
+Full version: Contains all resource files for the mod. Resource files cannot be replaced. The file size is larger, suitable for players who don't want to tinker.
 
-Lite Version: Does not include the sound files for the mod's instruments. A specified resource pack must be manually loaded in order to play the instruments. The mod file size is very small, making it suitable for servers or players who wish to customize the instrument sounds on their client. Please note: If the corresponding instrument resource pack is not added in the format required by the mod, playing instruments or syncing notes from other players' MIDI playboxes will not produce the corresponding instrument sounds.
+Lightweight version: Does not contain the mod's instrument sound files. You need to manually load the specified resource pack to play instruments. The mod file size is very small, suitable for servers or players who want a customized client instrument sound. Note: If you do not add the resource pack for the corresponding instrument according to the mod's resource format, playing the instrument or syncing MIDI Jukebox notes from other players will not produce the corresponding instrument sound.
 
-Neither the Full Version nor the Lite Version will affect multiplayer functionality.
+Both the full and lightweight versions will not affect multiplayer functionality.
 
-1.Please go to GeckoLib's [GitHub repository](https://github.com/bernie-g/geckolib), [modrinth page](https://modrinth.com/mod/geckolib), or other sources to download the corresponding version of GeckoLib-NeoForge. Then, place the downloaded JAR file into your `mods` folder.<br>
-2.Please download the latest version of this mod from the `Releases` section on the right or from Modrinth, and place the downloaded JAR file into your `mods` folder.<br>
+Starting from version `0.0.9-beta`, all instrument sounds in the mod have been replaced with authentic instrument sound sources from the CC0 license or instrument samples from FluidR3_GM using the MIT license, and the full version of the mod is officially available for download.
 
-**Due to some sound sources not yet having clear authorization, the full version of the mod will not be provided at this time. The Lite version will only include resource packs for sound sources that have been properly authorized.The resource pack for unauthorized sound sources contains only the basic file structure and does not include any .ogg files.**
+1. Download the corresponding version of GeckoLib-NeoForge from GeckoLib's [GitHub repository](https://github.com/bernie-g/geckolib), [Modrinth](https://modrinth.com/mod/geckolib), etc., and place the downloaded jar file into your `mods` folder.<br>
+2. Download the latest version of this mod from the Releases section on the right or from Modrinth, etc., and place the downloaded jar file into your `mods` folder.<br>
+3. If you downloaded the lite version, you can go to [Modrinth](https://modrinth.com/resourcepack/minefantasia-resources) to download the relevant resource pack.
 
 Copyright Notice
 =======
-Copyright © 2026 Seikai-Takenawa for the mod (MineFantasia). All Rights Reserved.
+Copyright © 2026 Seikai-Takenawa. All Rights Reserved for this mod (MineFantasia).
 
-Permitted Actions:
+Permitted actions:
 
-- Functional behaviors of the mod, such as model replacement, animation replacement, modifying instrument sound sources in the mod by editing the resource pack, etc.
-- You may record gameplay content featuring the mod and share it on social media.
+- Functional behaviors of the mod, such as: model replacement, animation replacement, modifying instrument sound sources in the mod by editing resource packs, etc.
+- You may record mod gameplay content and share it on social media.
 - You may share copies of this mod with your friends for personal, non-commercial use only.
-- You may use this mod on your Minecraft client or on non-commercial servers.
+- You may use this mod on your Minecraft client or non-commercial servers.
 
-Prohibited Actions:
+Prohibited actions:
 
-- You are prohibited from modifying the mod in any way other than those explicitly permitted above, as well as from decompiling, disassembling, or creating derivative works based on this mod.
-- You are prohibited from publicly distributing or re-uploading this mod on any other website or platform.
-- You are prohibited from using this mod for any commercial purposes (including but not limited to selling it, or including it as part of a paid modpack or server, etc.).
-- Any other actions not explicitly permitted.
+- Any modification beyond those permitted above, reverse engineering, decompiling, or creating derivative works of this mod is prohibited.
+- Publicly distributing or re-uploading this mod on any other website or platform is prohibited.
+- Using this mod for any commercial purpose (including but not limited to selling, as part of a paid modpack/server, etc.) is prohibited.
+- Any actions not explicitly stated as permitted.
 
-FAQs
+Frequently Asked Questions
 =======
-Q1.How can I obtain the instruments?<br>
-A1.Currently, instruments are not craftable or manufacturable. In non-Creative mode, the mod's piano naturally generates at the center of the mod's structure `Concert Hall` and is indestructible. Other instruments can only be obtained randomly from the backstage chests of the `Concert Hall`.
+Q1. How do I obtain instruments?<br>
+A1. Currently, instruments cannot be crafted or obtained via crafting recipes. In non-creative mode, the mod's piano naturally generates at the center of the mod's structure `Concert Hall` and is indestructible. Other instruments can only be obtained randomly from chests in the backstage area of the `Concert Hall`.
 
-Q2.In multiplayer mode, I cannot hear the sound of other players' instrument performances.<br>
-A2.In multiplayer mode, the instrument performance system only synchronizes performance data to players who are in the same chunk as the player currently playing an instrument.
+Q2. In multiplayer, I can't hear other players playing instruments.<br>
+A2. In multiplayer, the instrument performance system only syncs performance information to players who are in the same chunk as the player playing the instrument.
 
-Q3.In first-person view, I can see through blocks.<br>
-A3.The mod has refactored the camera follow system for the first-person perspective. The camera is now always positioned at the `cameraAnchor` of the player model's head. As a result, when the player looks downward while standing close to a block, the camera position may extend beyond the player's collision box, potentially causing clipping issues. Additionally, incorrect configuration of the `pivot` of the `cameraAnchor` bone by the modeler may also cause the camera coordinates to exceed the collision box. Currently, there is no better solution for this issue. It is recommended that custom player models have a smaller head design and that the `pivot` of both the head and `cameraAnchor` bones be adjusted to appropriate positions to prevent the head from moving outside the collision box.
+Q3. I can see through blocks in first-person view.<br>
+A3. The mod has restructured the camera following system for the first-person view. The camera is now always positioned at the `cameraAnchor` of the player model's head. Therefore, when a player looks down while standing very close to a block in front of them, the camera position may end up outside the player's collision box, leading to x-ray vision issues. Additionally, incorrect configuration of the `cameraAnchor` bone's `pivot` by the modeler can also cause the camera coordinates to exceed the player's collision box. Currently, there's no perfect solution for this issue. It is recommended to design the replacement player model's head smaller and adjust the `pivot` of the head and `cameraAnchor` bones to suitable positions to avoid the head exceeding the player's collision box during movement.
 
-Q4.The size, angle, or appearance of certain items held by the player appears unusual across different perspectives.<br>
-A4.Due to the complete replacement of the original player model system, the vanilla item rendering logic is no longer compatible with the replaced GeckoLib model. This issue is currently being adapted and improved.
+Q4. The size, angle, etc., of certain items displayed on the player's hand look strange in various views.<br>
+A4. Replacing the entire vanilla player model system means the vanilla item rendering logic no longer applies to the replaced GeckoLib model. This issue is being adapted and improved.
 
-Q5.Why doesn’t the violin have a bow?<br>
-A5.Adding a bow to the violin would affect the logic of how the violin is used and played, and would also make the model's animation while playing the violin more complex. Due to my limited artistic expertise, I honestly don’t know how to approach this part. (Actually, laziness is also a factor — anyway, let’s just treat it like a regular instrument for now and make do ﹙ˊ_>ˋ﹚)
+Q5. Why doesn't the violin have a bow?<br>
+A5. Adding a bow to the violin would affect the usage and performance logic of the violin, and also make the model's animation while playing the violin more complex. My personal artistic ability is limited, and I really don't know how to handle this part. (Actually, another reason is laziness. Anyway, everyone can just treat it as a regular instrument for now﹙ˊ_>ˋ﹚)
 
-Q6.MIDI playbox speed is incorrect / stuttering / running too fast.
-A6.Since the mod uses Minecraft's built-in tick system for timing, its accuracy is affected by fluctuations in the tick rate of the server/client.
+Q6. The MIDI Jukebox speed is incorrect/stuttering/speeding up.<br>
+A6. Because the mod uses Minecraft's built-in tick system for timing, its accuracy is affected by fluctuations in the server/client's tick rate.
 
-Q7.Will lower versions be supported? Will there be a version of the mod for Forge/Fabric in the future?<br>
-A7.Due to limited personal development capacity, there are currently no plans to develop a Forge/Fabric version. The mod uses GeckoLib5, so the minimum supported version is 1.21.5.
+Q7. Will older versions be supported? Will there be Forge/Fabric versions in the future?<br>
+A7. Due to limited personal development effort, there are currently no plans for Forge/Fabric versions. The mod uses GeckoLib 5, so the minimum supported version is 1.21.5.
 
-Q8.Can I obtain the source code to add custom instruments and features to the mod?<br>
-A8.The mod is not open-source at this time. Thank you for your understanding! However, you can achieve similar functionality by downloading the Lite version of the mod and replacing the sound sources in the resource pack for specific instruments.
+Q8. Can I get the source code to add custom instruments and features to the mod?<br>
+A8. The mod is not open source at this time, thank you for your understanding! However, you can achieve similar functionality by downloading the Lightweight version of the mod and replacing the sound sources in the resource pack for a specific instrument. The mod will also add General Instrument versions for various instruments in the future.
